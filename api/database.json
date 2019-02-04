@@ -1,0 +1,130 @@
+{
+  "users": [
+     {
+        "id": 1,
+        "email": "me@me.com",
+        "password": "me"
+     },
+    {
+        "id": 2,
+        "email": "you@you.com",
+        "password": "you"
+     }
+  ],
+  "exercises": [
+     {
+        "id": 1,
+        "userId": 1,
+        "exerciseName": "squat",
+        "bodyCategoryId": 9,
+        "equipmentTypeId": 2,
+        "sets": 1,
+        "reps": 10,
+        "weightLifted": 275,
+        "notes": "Light. Go to 300 next time"
+     },
+    {
+        "id": 2,
+        "userId": 2,
+        "exerciseName": "snatch",
+        "bodyCategoryId": 9,
+        "equipmentTypeId": 2,
+        "sets": 2,
+        "reps": 8,
+        "weightLifted": 350,
+        "notes": "Set 1 - 350, set 2 - 375"
+     }
+  ],
+  "bodyCategory": [
+     {
+        "bodyCategoryId": 1,
+        "categoryName": "Abs"
+     },
+    {
+        "bodyCategoryId": 2,
+        "categoryName": "Back"
+     },
+    {
+        "bodyCategoryId": 3,
+        "categoryName": "Biceps"
+     },
+    {
+        "bodyCategoryId": 4,
+        "categoryName": "Calves"
+     },
+    {
+        "bodyCategoryId": 5,
+        "categoryName": "Chest"
+     },
+    {
+        "bodyCategoryId": 6,
+        "categoryName": "Forearms"
+     },
+    {
+        "bodyCategoryId": 7,
+        "categoryName": "Glutes"
+     },
+    {
+        "bodyCategoryId": 8,
+        "categoryName": "Shoulders"
+     },
+    {
+        "bodyCategoryId": 9,
+        "categoryName": "Thighs"
+     },
+    {
+        "bodyCategoryId": 10,
+        "categoryName": "Triceps"
+     },
+    {
+        "bodyCategoryId": 11,
+        "categoryName": "Aerobic"
+     }
+  ],
+  "equipmentType": [
+     {
+        "equipmentTypeId": 1,
+        "categoryName": "Band"
+     },
+    {
+        "equipmentTypeId": 2,
+        "categoryName": "Barbell"
+     },
+    {
+        "equipmentTypeId": 3,
+        "categoryName": "Bench"
+     },
+    {
+        "equipmentTypeId": 4,
+        "categoryName": "Dumbbell"
+     },
+    {
+        "equipmentTypeId": 5,
+        "categoryName": "EZ bar"
+     },
+    {
+        "equipmentTypeId": 6,
+        "categoryName": "Kettlebell"
+     },
+    {
+        "equipmentTypeId": 7,
+        "categoryName": "Machine"
+     },
+    {
+        "equipmentTypeId": 8,
+        "categoryName": "Medicine ball"
+     },
+    {
+        "equipmentTypeId": 9,
+        "categoryName": "Pull-up bar"
+     },
+    {
+        "equipmentTypeId": 10,
+        "categoryName": "Sled"
+     },
+    {
+        "equipmentTypeId": 11,
+        "categoryName": "Weight plate"
+     }
+  ]
+}
