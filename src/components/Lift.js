@@ -16,4 +16,4 @@ class Lift extends Component {
     }
 }
 
-export default Lift;
+export default Lift
