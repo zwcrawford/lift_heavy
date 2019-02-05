@@ -1,130 +1,130 @@
 {
   "users": [
     {
-        "id": 1,
-        "email": "me@me.com",
-        "password": "me"
+      "id": 1,
+      "email": "me@me.com",
+      "password": "me"
     },
     {
-        "id": 2,
-        "email": "you@you.com",
-        "password": "you"
+      "id": 2,
+      "email": "you@you.com",
+      "password": "you"
     }
   ],
   "exercises": [
     {
-        "id": 1,
-        "userId": 1,
-        "exerciseName": "Squat",
-        "bodyCategoryId": 9,
-        "equipmentTypeId": 2,
-        "sets": 1,
-        "reps": 10,
-        "weightLifted": 275,
-        "notes": "Light. Go to 300 next time"
+      "id": 1,
+      "userId": 1,
+      "exerciseName": "Squat",
+      "bodyCategoryId": 9,
+      "equipmentTypeId": 2,
+      "sets": 1,
+      "reps": 10,
+      "weightLifted": 275,
+      "notes": "Light. Go to 300 next time"
     },
     {
-        "id": 2,
-        "userId": 2,
-        "exerciseName": "Snatch",
-        "bodyCategoryId": 9,
-        "equipmentTypeId": 2,
-        "sets": 2,
-        "reps": 8,
-        "weightLifted": 350,
-        "notes": "Set 1 - 350, set 2 - 375"
+      "id": 2,
+      "userId": 2,
+      "exerciseName": "Snatch",
+      "bodyCategoryId": 9,
+      "equipmentTypeId": 2,
+      "sets": 2,
+      "reps": 8,
+      "weightLifted": 350,
+      "notes": "Set 1 - 350, set 2 - 375"
     }
   ],
   "bodyCategories": [
     {
-        "id": 1,
-        "categoryName": "Abs"
+      "id": 1,
+      "categoryName": "Abs"
     },
     {
-        "id": 2,
-        "categoryName": "Back"
+      "id": 2,
+      "categoryName": "Back"
     },
     {
-        "id": 3,
-        "categoryName": "Biceps"
+      "id": 3,
+      "categoryName": "Biceps"
     },
     {
-        "id": 4,
-        "categoryName": "Calves"
+      "id": 4,
+      "categoryName": "Calves"
     },
     {
-        "id": 5,
-        "categoryName": "Chest"
+      "id": 5,
+      "categoryName": "Chest"
     },
     {
-        "id": 6,
-        "categoryName": "Forearms"
+      "id": 6,
+      "categoryName": "Forearms"
     },
     {
-        "id": 7,
-        "categoryName": "Glutes"
+      "id": 7,
+      "categoryName": "Glutes"
     },
     {
-        "id": 8,
-        "categoryName": "Shoulders"
+      "id": 8,
+      "categoryName": "Shoulders"
     },
     {
-        "id": 9,
-        "categoryName": "Thighs"
+      "id": 9,
+      "categoryName": "Thighs"
     },
     {
-        "id": 10,
-        "categoryName": "Triceps"
+      "id": 10,
+      "categoryName": "Triceps"
     },
     {
-        "id": 11,
-        "categoryName": "Aerobic"
+      "id": 11,
+      "categoryName": "Aerobic"
     }
   ],
   "equipmentTypes": [
     {
-        "id": 1,
-        "equipmentName": "Band"
+      "id": 1,
+      "equipmentName": "Band"
     },
     {
-        "id": 2,
-        "equipmentName": "Barbell"
+      "id": 2,
+      "equipmentName": "Barbell"
     },
     {
-        "id": 3,
-        "equipmentName": "Bench"
+      "id": 3,
+      "equipmentName": "Bench"
     },
     {
-        "id": 4,
-        "equipmentName": "Dumbbell"
+      "id": 4,
+      "equipmentName": "Dumbbell"
     },
     {
-        "id": 5,
-        "equipmentName": "EZ bar"
+      "id": 5,
+      "equipmentName": "EZ bar"
     },
     {
-        "id": 6,
-        "equipmentName": "Kettlebell"
+      "id": 6,
+      "equipmentName": "Kettlebell"
     },
     {
-        "id": 7,
-        "equipmentName": "Machine"
+      "id": 7,
+      "equipmentName": "Machine"
     },
     {
-        "id": 8,
-        "equipmentName": "Medicine ball"
+      "id": 8,
+      "equipmentName": "Medicine ball"
     },
     {
-        "id": 9,
-        "equipmentName": "Pull-up bar"
+      "id": 9,
+      "equipmentName": "Pull-up bar"
     },
     {
-        "id": 10,
-        "equipmentName": "Sled"
+      "id": 10,
+      "equipmentName": "Sled"
     },
     {
-        "id": 11,
-        "equipmentName": "Weight plate"
+      "id": 11,
+      "equipmentName": "Weight plate"
     }
   ]
 }
