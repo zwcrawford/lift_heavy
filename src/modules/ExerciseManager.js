@@ -15,5 +15,14 @@ export default {
       },
       body: JSON.stringify(newExercise)
     }).then(data => data.json());
+  },
+  put(exerciseId, existingExercise) {
+    return fetch(`${remoteURL}/${exerciseId}/edit`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(existingExercise)
+      }).then(data => data.json());
   }
 };
