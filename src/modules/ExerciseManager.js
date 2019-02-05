@@ -7,13 +7,13 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/exercises?_expand=bodyCategory&_expand=equipmentType`).then(e => e.json());
   },
-  post(newExercise) {
+  post(exercise) {
     return fetch(`${remoteURL}/exercises`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(newExercise)
+      body: JSON.stringify(exercise)
     }).then(data => data.json());
   },
   put(exerciseId, existingExercise) {

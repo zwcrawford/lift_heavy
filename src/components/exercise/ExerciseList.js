@@ -13,7 +13,8 @@ export default class ExerciseList extends Component {
             onClick={() => {
               this.props.history.push("/exercises/new");
             }}
-          >Add Exercise</button>
+          >Add Exercise
+          </button>
         </div>
         <section className="exercises">
           {this.props.exercises.map(exercise => (

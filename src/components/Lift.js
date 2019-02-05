@@ -5,7 +5,7 @@ import "./Lift.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 
-class Lift extends Component {
+export default class Lift extends Component {
     render() {
         return (
             <React.Fragment>
@@ -15,5 +15,3 @@ class Lift extends Component {
         )
     }
 }
-
-export default Lift
