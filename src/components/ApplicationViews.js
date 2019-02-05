@@ -6,7 +6,9 @@ import ExerciseManager from "../modules/ExerciseManager";
 class ApplicationViews extends Component {
     state = {
       users: [],
-      exercises: []
+      exercises: [],
+      bodyCategory: [],
+      equipmentType: []
     }
 
 /* ********** ADD EXERCISES ********** */

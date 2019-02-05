@@ -5,7 +5,7 @@ export default {
     return fetch(`${remoteURL}/exercises/${id}`).then(e => e.json());
   },
   getAll() {
-    return fetch(`${remoteURL}/exercises`).then(e => e.json());
+    return fetch(`${remoteURL}/exercises?_expand=bodyCategory&_expand=equipmentType`).then(e => e.json());
   },
   post(newExercise) {
     return fetch(`${remoteURL}/exercises`, {
