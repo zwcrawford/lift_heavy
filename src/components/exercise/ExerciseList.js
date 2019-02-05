@@ -1,10 +1,8 @@
 import React, { Component } from "react"
-//import ExerciseCard from "./ExerciseCard"
-import ExerciseCard from "../exercise/ExerciseCard";
-
+import ExerciseCard from "./ExerciseCard"
 import "./Exercise.css";
 
-class ExerciseList extends Component {
+export default class ExerciseList extends Component {
   render() {
     return (
       <React.Fragment>
@@ -15,17 +13,14 @@ class ExerciseList extends Component {
             onClick={() => {
               this.props.history.push("/exercises/new");
             }}
-          >
-            Add Exercise
-          </button>
+          >Add Exercise</button>
         </div>
-      <section className="exercise">
-      {this.props.exercises.map(exercise => (
+        <section className="exercises">
+          {this.props.exercises.map(exercise => (
             <ExerciseCard key={exercise.id} exercise={exercise} {...this.props} />
           ))}
         </section>
-        </React.Fragment>
+      </React.Fragment>
     )
   }
 }
-export default ExerciseList
