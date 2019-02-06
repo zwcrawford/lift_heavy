@@ -57,7 +57,7 @@ export default class ExerciseAddForm extends Component {
           {/* Form starts here: */}
           {/* text and input for exercise name: */}
           <div className="form-group">
-            <text htmlFor="exerciseName">Exercise Name:</text>
+            <label htmlFor="exerciseName">Exercise Name:</label>
             <input
               type="text"
               required
@@ -67,75 +67,87 @@ export default class ExerciseAddForm extends Component {
               placeholder="Exercise name"
             />
           </div>
-          {/* text and input for body group: */}
+          {/* text and dropdown for body group: */}
           <div className="form-group">
-            <text htmlFor="bodyCategoryId">Body Group:</text>
-            <input
-              type="text"
-              required
-              className="form-control"
-              onChange={this.handleFieldChange}
+            <label htmlFor="bodyCategoryId">Body Group:</label>
+            <br />
+            <select
+              defaultValue=""
+              name="bodyCategoryId"
               id="bodyCategoryId"
-              placeHolder="Leg day?"
-            />
-          </div>
-          {/* text and input for equipment type: */}
-          <div className="form-group">
-            <text htmlFor="equipmentTypeId">Equipment:</text>
-            <input
-              type="text"
-              required
-              className="form-control"
               onChange={this.handleFieldChange}
+            >
+            <option value="">Select a body group</option>
+            {this.props.bodyCategories.map(evt => (
+              <option key={evt.id} value={evt.id}>
+              {evt.categoryName}
+              </option>
+            ))}
+            </select>
+          </div>
+          {/* text and dropdown for body group: */}
+          <div className="form-group">
+            <label htmlFor="equipmentTypeId">Equipment Type:</label>
+            <br />
+            <select
+              defaultValue=""
+              name="equipmentTypeId"
               id="equipmentTypeId"
-              placeHolder="Equipment type"
-            />
+              onChange={this.handleFieldChange}
+            >
+            <option value="">Select equipment</option>
+            {this.props.equipmentTypes.map(evt => (
+              <option key={evt.id} value={evt.id}>
+              {evt.equipmentName}
+              </option>
+            ))}
+            </select>
           </div>
           {/* text and input for sets: */}
           <div className="form-group">
-            <text htmlFor="sets">Sets:</text>
+            <label htmlFor="sets">Sets:</label>
             <input
               type="text"
               required
               className="form-control"
               onChange={this.handleFieldChange}
               id="sets"
-              placeHolder="Number of sets"
+              placeholder="Number of sets"
             />
           </div>
           {/* text and input for reps: */}
           <div className="form-group">
-            <text htmlFor="reps">Reps:</text>
+            <label htmlFor="reps">Reps:</label>
             <input
               type="text"
               required
               className="form-control"
               onChange={this.handleFieldChange}
               id="reps"
-              placeHolder="Number of reps"
+              placeholder="Number of reps"
             />
           </div>
           {/* text and input for weight: */}
           <div className="form-group">
-            <text htmlFor="weightLifted">Weight Lifted:</text>
+            <label htmlFor="weightLifted">Weight Lifted:</label>
             <input
               type="text"
               required
               className="form-control"
               onChange={this.handleFieldChange}
               id="weightLifted"
-              placeHolder="Enter the number of reps"
+              placeholder="Enter the number of reps"
             />
           </div>
           <div className="form-group">
-            <text htmlFor="notes">Notes:</text>
+            <label htmlFor="notes">Notes:</label>
             <input
               type="textarea"
               required
               className="form-control"
               onChange={this.handleFieldChange}
               id="notes"
-              placeHolder="Additional Notes"
+              placeholder="Additional Notes"
             />
           </div>
           <div>
