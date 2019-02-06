@@ -22,11 +22,11 @@ export default class ExerciseCard extends Component {
             Exercise: {this.props.exercise.exerciseName}
           </h5>
           <label>
-            Body Group: {this.props.exercise.bodyCategory.categoryName}
+            Body Group: {this.props.bodyCategories.categoryName}
           </label>
           <br />
           <label>
-            Equipment: {this.props.exercise.equipmentType.equipmentName}
+            Equipment: {this.props.equipmentTypes.equipmentName}
           </label>
           <br />
           <label>
@@ -44,20 +44,20 @@ export default class ExerciseCard extends Component {
           <label>
             Notes: {this.props.exercise.notes}
           </label>
-            <div className="editButton">
-              <button
-                href={`/exercises/${this.props.exercise.id}/edit`}
-                onClick={() =>
-                  this.props.updateExercise(this.props.exercise.id, this.props.exercise)}
-                  className="card-button"
-              >Edit</button>
-            </div>
-              <div className="deleteButton">
-              <button
-                onClick={() => this.props.deleteExercise(this.props.exercise.id)}
+          <div className="editButton">
+            <button
+              href={`/exercises/${this.props.exercise.id}/edit`}
+              onClick={() =>
+                this.props.updateExercise(this.props.exercise.id, this.props.exercise)}
                 className="card-button"
-              >Delete</button>
-            </div>
+            >Edit</button>
+          </div>
+            <div className="deleteButton">
+            <button
+              onClick={() => this.props.deleteExercise(this.props.exercise.id)}
+              className="card-button"
+            >Delete</button>
+          </div>
         </div>
       </div>
     );

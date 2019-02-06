@@ -32,11 +32,12 @@ export default class ExerciseAddForm extends Component {
     this.setState(stateToChange);
   };
 
-  /* Local method for validation, creating animal object, and invoking the function reference passed from parent component*/
+  /* Local method for validation, creating exercise object, and invoking the function reference passed from parent component*/
   constructNewExercise = evt => {
     evt.preventDefault();
     const exercise = {
       exerciseName: this.state.exerciseName,
+      bodyCategoryId: this.state.bodyCategoryId,
       equipmentTypeId: this.state.equipmentTypeId,
       sets: this.state.sets,
       reps: this.state.reps,
@@ -45,7 +46,7 @@ export default class ExerciseAddForm extends Component {
     };
     // Create the exercise and route the user back to the exerciseList
     this.props.addExercise(exercise)
-    .then(() => this.props.history.push("/exercises"));
+    .then(() => this.props.history.push("/exercise"));
   }
 
   render() {
@@ -85,7 +86,7 @@ export default class ExerciseAddForm extends Component {
             ))}
             </select>
           </div>
-          {/* text and dropdown for body group: */}
+          {/* text and dropdown for equipment type: */}
           <div className="form-group">
             <label htmlFor="equipmentTypeId">Equipment Type:</label>
             <br />
@@ -154,7 +155,7 @@ export default class ExerciseAddForm extends Component {
             <button
               type="submit"
               className="btn btn-primary"
-              onClick={this.constructNewTask}
+              onClick={this.constructNewExercise}
               id="add-form-btn"
             >Save
             </button>

@@ -1,4 +1,4 @@
-import { Route, Redirect } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import React, { Component } from "react"
 import ExerciseManager from "../modules/ExerciseManager";
 import ExerciseList from './exercise/ExerciseList'
@@ -96,6 +96,8 @@ export default class ApplicationViews extends Component {
               <ExerciseList
                 {...props}
                 deleteExercise={this.deleteExercise}
+                bodyCategories={this.state.bodyCategories}
+                equipmentTypes={this.state.equipmentTypes}
                 exercises={this.state.exercises}
               />
             );
