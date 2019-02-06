@@ -6,12 +6,12 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 
 export default class Lift extends Component {
-    render() {
-        return (
-            <React.Fragment>
-                <NavBar />
-                <ApplicationViews />
-            </React.Fragment>
-        )
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <NavBar />
+        <ApplicationViews />
+      </React.Fragment>
+    );
+  }
 }
