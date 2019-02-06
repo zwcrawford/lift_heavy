@@ -22,6 +22,29 @@ export default class ApplicationViews extends Component {
       })
     );
 
+    /* ********** GET BODY CATEGORIES ********** */
+    getAllBodyCategories() {
+      return fetch("http://localhost:5002/bodyCategories")
+      .then(e => e.json())
+      .then(bodyCategories =>
+        this.setState({
+          bodyCategories: bodyCategories
+        })
+      )
+    }
+
+    /* ********** GET EQUIPMENT TYPES ********** */
+    getAllEquipmentTypes() {
+      return fetch("http://localhost:5002/equipmentTypes")
+      .then(e => e.json())
+      .then(equipmentTypes =>
+        this.setState({
+          equipmentTypes: equipmentTypes
+        })
+      )
+    }
+
+
   /* ********** DELETE EXERCISES ********** */
   deleteExercise = id => {
     return fetch(`http://localhost:5002/exercises/${id}`, {
@@ -56,6 +79,8 @@ export default class ApplicationViews extends Component {
         exercises: allExercises
       });
     });
+    this.getAllBodyCategories()
+    this.getAllEquipmentTypes()
   }
 
   render() {
@@ -85,6 +110,9 @@ export default class ApplicationViews extends Component {
               <ExerciseAddForm
                 {...props}
                 addExercise={this.addExercise}
+                bodyCategories={this.state.bodyCategories}
+                equipmentTypes={this.state.equipmentTypes}
+                exercises={this.state.exercises}
               />
             );
           }}
