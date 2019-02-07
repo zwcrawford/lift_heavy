@@ -23,11 +23,11 @@ export default class ExerciseCard extends Component {
             Exercise: {this.props.exercise.exerciseName}
           </h5>
           <label>
-            Body Group: {this.bodyCategory.categoryName}
+            Body Group: {this.props.exercise.bodyCategory ? this.props.exercise.bodyCategory.categoryName : ""}
           </label>
           <br />
           <label>
-            Equipment: {this.exercise.exerciseType.exerciseName}
+            Equipment: {this.props.exercise.equipmentName}
           </label>
           <br />
           <label>

@@ -16,6 +16,7 @@ import "./Exercise.css";
 export default class ExerciseAddForm extends Component {
   // Set initial state.
   state = {
+    userID: "",
     exerciseName: "",
     categoryName: "",
     equipmentName: "",
@@ -37,7 +38,7 @@ export default class ExerciseAddForm extends Component {
     evt.preventDefault();
     const exercise = {
       exerciseName: this.state.exerciseName,
-      categoryName: this.props.categoryName,
+      categoryName: this.state.categoryName,
       equipmentName: this.state.equipmentName,
       sets: this.state.sets,
       reps: this.state.reps,
