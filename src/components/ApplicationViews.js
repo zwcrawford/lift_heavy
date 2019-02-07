@@ -9,7 +9,9 @@ export default class ApplicationViews extends Component {
       users: [],
       exercises: [],
       bodyCategories: [],
-      equipmentTypes: []
+      equipmentTypes: [],
+      categoryName: [],
+      equipmentName: []
     }
 
   /* ********** ADD EXERCISES ********** */
@@ -72,15 +74,15 @@ export default class ApplicationViews extends Component {
     });
   }
 
-  // Do a ternary statement on the body categories after the render but before the return
-  getBodyCatToDOM(bodyCat) {
-    return (bodyCat ? this.exercise.bodyCategoryId,   .categoryName : "")
-  }
+  // // Write a ternary statement on the body categories after the render but before the return
+  // getBodyCatToDOM(bodyCat) {
+  //   return (bodyCat ? this.props.bodyCategory.categoryName : "")
+  // }
 
-  // Do a ternary statement on the equipment names after the render but before the return
-  getEquipNameToDOM(equipName) {
-    return (equipName ? this.exercise.exerciseTypes.exerciseName : "")
-  }
+  // // Do a ternary statement on the equipment names after the render but before the return
+  // getEquipNameToDOM(equipName) {
+  //   return (equipName ? this.props.equipmentType.equipmentName : "")
+  // }
 
   componentDidMount() {
     ExerciseManager.getAll().then(allExercises => {
@@ -90,8 +92,6 @@ export default class ApplicationViews extends Component {
     });
     this.getAllBodyCategories()
     this.getAllEquipmentTypes()
-    this.getBodyCatToDOM(categoryName)
-    this.getEquipNameToDOM()
   }
   render() {
     return (
@@ -109,6 +109,8 @@ export default class ApplicationViews extends Component {
                 bodyCategories={this.state.bodyCategories}
                 equipmentTypes={this.state.equipmentTypes}
                 exercises={this.state.exercises}
+                categoryName={this.state.categoryName}
+                equipmentName={this.state.equipmentName}
               />
             );
           }}
