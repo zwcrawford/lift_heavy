@@ -18,7 +18,8 @@ export default class ExerciseList extends Component {
         </div>
         <section className="exercises">
           {this.props.exercises.map(exercise => (
-            <ExerciseCard key={exercise.id} exercise={exercise} {...this.props} />
+            <ExerciseCard key={exercise.id} exercise={exercise} {...this.props}
+            />
           ))}
         </section>
       </React.Fragment>

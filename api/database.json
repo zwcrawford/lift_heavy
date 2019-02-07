@@ -24,15 +24,14 @@
       "notes": "Light. Go to 300 next time"
     },
     {
-      "id": 2,
-      "userId": 2,
-      "exerciseName": "Snatch",
-      "bodyCategoryId": 9,
-      "equipmentTypeId": 2,
-      "sets": 2,
-      "reps": 8,
-      "weightLifted": 350,
-      "notes": "Set 1 - 350, set 2 - 375"
+      "exerciseName": "Test",
+      "bodyCategoryId": 1,
+      "equipmentTypeId": 1,
+      "sets": "8",
+      "reps": "8",
+      "weightLifted": "8",
+      "notes": "Test",
+      "id": 4
     }
   ],
   "bodyCategories": [
