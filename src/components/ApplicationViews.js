@@ -22,28 +22,27 @@ export default class ApplicationViews extends Component {
       })
     );
 
-    /* ********** GET BODY CATEGORIES ********** */
-    getAllBodyCategories() {
-      return fetch("http://localhost:5002/bodyCategories")
-      .then(e => e.json())
-      .then(bodyCategories =>
-        this.setState({
-          bodyCategories: bodyCategories
-        })
+  /* ********** GET BODY CATEGORIES ********** */
+  getAllBodyCategories() {
+    return fetch("http://localhost:5002/bodyCategories")
+    .then(e => e.json())
+    .then(bodyCategories =>
+      this.setState({
+        bodyCategories: bodyCategories
+      })
       )
     }
 
-    /* ********** GET EQUIPMENT TYPES ********** */
-    getAllEquipmentTypes() {
-      return fetch("http://localhost:5002/equipmentTypes")
-      .then(e => e.json())
-      .then(equipmentTypes =>
-        this.setState({
-          equipmentTypes: equipmentTypes
-        })
+  /* ********** GET EQUIPMENT TYPES ********** */
+  getAllEquipmentTypes() {
+    return fetch("http://localhost:5002/equipmentTypes")
+    .then(e => e.json())
+    .then(equipmentTypes =>
+      this.setState({
+        equipmentTypes: equipmentTypes
+      })
       )
     }
-
 
   /* ********** DELETE EXERCISES ********** */
   deleteExercise = id => {
@@ -56,7 +55,7 @@ export default class ApplicationViews extends Component {
     .then(exercises => this.setState({
       exercises: exercises
 
-      })
+    })
     )
   }
 
@@ -73,6 +72,16 @@ export default class ApplicationViews extends Component {
     });
   }
 
+  // Do a ternary statement on the body categories after the render but before the return
+  getBodyCatToDOM(bodyCat) {
+    return (bodyCat ? this.exercise.bodyCategoryId,   .categoryName : "")
+  }
+
+  // Do a ternary statement on the equipment names after the render but before the return
+  getEquipNameToDOM(equipName) {
+    return (equipName ? this.exercise.exerciseTypes.exerciseName : "")
+  }
+
   componentDidMount() {
     ExerciseManager.getAll().then(allExercises => {
       this.setState({
@@ -81,8 +90,9 @@ export default class ApplicationViews extends Component {
     });
     this.getAllBodyCategories()
     this.getAllEquipmentTypes()
+    this.getBodyCatToDOM(categoryName)
+    this.getEquipNameToDOM()
   }
-
   render() {
     return (
       <React.Fragment>

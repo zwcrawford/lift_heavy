@@ -17,8 +17,8 @@ export default class ExerciseAddForm extends Component {
   // Set initial state.
   state = {
     exerciseName: "",
-    bodyCategoryId: "",
-    equipmentTypeId: "",
+    categoryName: "",
+    equipmentName: "",
     sets: "",
     reps: "",
     weightLifted: "",
@@ -37,8 +37,8 @@ export default class ExerciseAddForm extends Component {
     evt.preventDefault();
     const exercise = {
       exerciseName: this.state.exerciseName,
-      bodyCategoryId: this.state.bodyCategoryId,
-      equipmentTypeId: this.state.equipmentTypeId,
+      categoryName: this.props.categoryName,
+      equipmentName: this.state.equipmentName,
       sets: this.state.sets,
       reps: this.state.reps,
       weightLifted: this.state.weightLifted,
@@ -46,7 +46,7 @@ export default class ExerciseAddForm extends Component {
     };
     // Create the exercise and route the user back to the exerciseList
     this.props.addExercise(exercise)
-    .then(() => this.props.history.push("/exercise"));
+    .then(() => this.props.history.push("/"));
   }
 
   render() {

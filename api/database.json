@@ -24,60 +24,14 @@
       "notes": "Light. Go to 300 next time"
     },
     {
-      "id": 2,
-      "userId": 2,
-      "exerciseName": "Snatch",
-      "bodyCategoryId": 9,
-      "equipmentTypeId": 2,
-      "sets": 2,
-      "reps": 8,
-      "weightLifted": 350,
-      "notes": "Set 1 - 350, set 2 - 375"
-    },
-    {
       "exerciseName": "Test",
-      "equipmentTypeId": "1",
-      "sets": "Test",
-      "reps": "Test",
-      "weightLifted": "Test",
-      "notes": "Test",
-      "id": 3
-    },
-    {
-      "exerciseName": "Test",
-      "equipmentTypeId": "1",
-      "sets": "Test",
-      "reps": "Test",
-      "weightLifted": "Test",
+      "bodyCategoryId": 1,
+      "equipmentTypeId": 1,
+      "sets": "8",
+      "reps": "8",
+      "weightLifted": "8",
       "notes": "Test",
       "id": 4
-    },
-    {
-      "exerciseName": "Test",
-      "equipmentTypeId": "1",
-      "sets": "Test",
-      "reps": "Test",
-      "weightLifted": "Test",
-      "notes": "Test",
-      "id": 5
-    },
-    {
-      "exerciseName": "Test",
-      "equipmentTypeId": "1",
-      "sets": "Test",
-      "reps": "Test",
-      "weightLifted": "Test",
-      "notes": "Test",
-      "id": 6
-    },
-    {
-      "exerciseName": "Test",
-      "equipmentTypeId": "1",
-      "sets": "Test",
-      "reps": "Test",
-      "weightLifted": "Test",
-      "notes": "Test",
-      "id": 7
     }
   ],
   "bodyCategories": [

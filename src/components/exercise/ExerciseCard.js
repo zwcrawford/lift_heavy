@@ -13,6 +13,7 @@ import "./Exercise.css";
 //       "weightLifted": 275,
 //       "notes": "Light. Go to 300 next time"
 //   },
+
 export default class ExerciseCard extends Component {
   render() {
     return (
@@ -22,11 +23,11 @@ export default class ExerciseCard extends Component {
             Exercise: {this.props.exercise.exerciseName}
           </h5>
           <label>
-            Body Group: {this.props.bodyCategories.categoryName}
+            Body Group: {this.bodyCategory.categoryName}
           </label>
           <br />
           <label>
-            Equipment: {this.props.equipmentTypes.equipmentName}
+            Equipment: {this.exercise.exerciseType.exerciseName}
           </label>
           <br />
           <label>
