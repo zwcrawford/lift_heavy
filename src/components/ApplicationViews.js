@@ -74,16 +74,6 @@ export default class ApplicationViews extends Component {
     });
   }
 
-  // // Write a ternary statement on the body categories after the render but before the return
-  // getBodyCatToDOM(bodyCat) {
-  //   return (bodyCat ? this.props.bodyCategory.categoryName : "")
-  // }
-
-  // // Do a ternary statement on the equipment names after the render but before the return
-  // getEquipNameToDOM(equipName) {
-  //   return (equipName ? this.props.equipmentType.equipmentName : "")
-  // }
-
   componentDidMount() {
     ExerciseManager.getAll().then(allExercises => {
       this.setState({
@@ -94,6 +84,8 @@ export default class ApplicationViews extends Component {
     this.getAllEquipmentTypes()
   }
   render() {
+    console.log("App View", this.state.exercises);
+
     return (
       <React.Fragment>
 
@@ -108,9 +100,9 @@ export default class ApplicationViews extends Component {
                 deleteExercise={this.deleteExercise}
                 bodyCategories={this.state.bodyCategories}
                 equipmentTypes={this.state.equipmentTypes}
-                exercises={this.state.exercises}
-                categoryName={this.state.categoryName}
-                equipmentName={this.state.equipmentName}
+                  categoryName={this.state.categoryName}
+                 equipmentName={this.state.equipmentName}
+                     exercises={this.state.exercises}
               />
             );
           }}
@@ -123,10 +115,11 @@ export default class ApplicationViews extends Component {
             return (
               <ExerciseAddForm
                 {...props}
-                addExercise={this.addExercise}
+                   addExercise={this.addExercise}
+                deleteExercise={this.deleteExercise}
                 bodyCategories={this.state.bodyCategories}
                 equipmentTypes={this.state.equipmentTypes}
-                exercises={this.state.exercises}
+                     exercises={this.state.exercises}
               />
             );
           }}
@@ -137,8 +130,8 @@ export default class ApplicationViews extends Component {
             path="/exercises/:exerciseId(\d+)/edit"
             render={props => {
               return (
-                <ExerciseEditForm
-                  {...props}
+                {/*<ExerciseEditForm*/},
+                  {/* {...props},
                   updateExercise={this.updateExercise}/>
               );
             }}

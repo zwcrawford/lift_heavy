@@ -16,8 +16,10 @@ import "./Exercise.css";
 export default class ExerciseAddForm extends Component {
   // Set initial state.
   state = {
-    userID: "",
+    userId: 1,
     exerciseName: "",
+    bodyCategoryId: "",
+    equipmentTypeId: "",
     categoryName: "",
     equipmentName: "",
     sets: "",
@@ -37,8 +39,11 @@ export default class ExerciseAddForm extends Component {
   constructNewExercise = evt => {
     evt.preventDefault();
     const exercise = {
+      userId: this.state.userId,
       exerciseName: this.state.exerciseName,
+      bodyCategoryId: this.state.bodyCategoryId,
       categoryName: this.state.categoryName,
+      equipmentTypeId: this.state.equipmentTypeId,
       equipmentName: this.state.equipmentName,
       sets: this.state.sets,
       reps: this.state.reps,
@@ -79,7 +84,7 @@ export default class ExerciseAddForm extends Component {
               id="bodyCategoryId"
               onChange={this.handleFieldChange}
             >
-            <option value="">Select a body group</option>
+            <option defaultValue="">Select a body group</option>
             {this.props.bodyCategories.map(evt => (
               <option key={evt.id} value={evt.id}>
               {evt.categoryName}
@@ -97,7 +102,7 @@ export default class ExerciseAddForm extends Component {
               id="equipmentTypeId"
               onChange={this.handleFieldChange}
             >
-            <option value="">Select equipment</option>
+            <option defaultValue="">Select equipment</option>
             {this.props.equipmentTypes.map(evt => (
               <option key={evt.id} value={evt.id}>
               {evt.equipmentName}
@@ -109,7 +114,7 @@ export default class ExerciseAddForm extends Component {
           <div className="form-group">
             <label htmlFor="sets">Sets:</label>
             <input
-              type="text"
+              type="number"
               required
               className="form-control"
               onChange={this.handleFieldChange}
@@ -121,7 +126,7 @@ export default class ExerciseAddForm extends Component {
           <div className="form-group">
             <label htmlFor="reps">Reps:</label>
             <input
-              type="text"
+              type="number"
               required
               className="form-control"
               onChange={this.handleFieldChange}
@@ -133,7 +138,7 @@ export default class ExerciseAddForm extends Component {
           <div className="form-group">
             <label htmlFor="weightLifted">Weight Lifted:</label>
             <input
-              type="text"
+              type="number"
               required
               className="form-control"
               onChange={this.handleFieldChange}
@@ -164,7 +169,7 @@ export default class ExerciseAddForm extends Component {
               type="submit"
               className="btn btn-primary"
               onClick={this.clearForm}
-              id="add-form-btn"
+              id="clr-form-btn"
             >Clear
             </button>
           </div>
