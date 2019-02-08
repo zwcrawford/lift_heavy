@@ -11,29 +11,7 @@
       "password": "you"
     }
   ],
-  "exercises": [
-    {
-      "id": 1,
-      "userId": 1,
-      "exerciseName": "Squat",
-      "bodyCategoryId": 9,
-      "equipmentTypeId": 2,
-      "sets": 1,
-      "reps": 10,
-      "weightLifted": 275,
-      "notes": "Light. Go to 300 next time"
-    },
-    {
-      "exerciseName": "Test",
-      "bodyCategoryId": 1,
-      "equipmentTypeId": 1,
-      "sets": "8",
-      "reps": "8",
-      "weightLifted": "8",
-      "notes": "Test",
-      "id": 4
-    }
-  ],
+  "exercises": [],
   "bodyCategories": [
     {
       "id": 1,
