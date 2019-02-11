@@ -8,6 +8,8 @@ export default class ExerciseEditForm extends Component {
     id: "",
     userId: "",
     exerciseName: "",
+    categoryName: "",
+    equipmentName: "",
     bodyCategoryId: "",
     equipmentTypeId: "",
     sets: "",
@@ -15,12 +17,11 @@ export default class ExerciseEditForm extends Component {
     weightLifted: "",
     notes: ""
   }
-
   // Makes sense to place the update function before the handleFieldChange
   updateCurrentExercise = evt => {
     evt.preventDefault();
     const currentExercise = {
-      id: this.state,
+      id: this.state.id,
       userId: this.state.userId,
       exerciseName: this.state.exerciseName,
       bodyCategoryId: this.state.bodyCategoryId,
@@ -32,8 +33,7 @@ export default class ExerciseEditForm extends Component {
       weightLifted: this.state.weightLifted,
       notes: this.state.notes
     }
-    console.log("updateExistingExercise from ExerciseEditForm", currentExercise);
-    this.props.updateExercise(currentExercise)
+    this.props.updateExercise(this.props.match.params.exerciseId, currentExercise)
     .then(() => this.props.history.push("/"));
   }
 
@@ -47,10 +47,18 @@ export default class ExerciseEditForm extends Component {
   }
 
   componentDidMount() {
-    ExerciseManager.getAll()
-      .then(allExercises => {
+    ExerciseManager.get(this.props.match.params.exerciseId)
+      .then(exercise => {
         this.setState({
-          exercises: allExercises
+          id: exercise.id,
+          userId: exercise.userId,
+          exerciseName: exercise.exerciseName,
+          categoryName: exercise.categoryName.value,
+          equipmentName: exercise.equipmentName.value,
+          sets: exercise.sets,
+          reps: exercise.reps,
+          weightLifted: exercise.weightLifted,
+          notes: exercise.notes
         })
       })
   }
@@ -73,7 +81,7 @@ export default class ExerciseEditForm extends Component {
               className="form-control"
               onChange={this.handleFieldChange}
               id="exerciseName"
-              placeholder="Exercise name"
+              value={this.state.exerciseName}
             />
           </div>
           {/* text and dropdown for body group: */}
@@ -81,10 +89,10 @@ export default class ExerciseEditForm extends Component {
             <label htmlFor="bodyCategoryId">Body Group:</label>
             <br />
             <select
-              defaultValue=""
               name="bodyCategoryId"
               id="bodyCategoryId"
               onChange={this.handleFieldChange}
+              value={this.state.bodyCategory}
             >
             <option defaultValue="">Select a body group</option>
             {this.props.bodyCategories.map(evt => (
@@ -99,10 +107,10 @@ export default class ExerciseEditForm extends Component {
             <label htmlFor="equipmentTypeId">Equipment Type:</label>
             <br />
             <select
-              defaultValue=""
               name="equipmentTypeId"
               id="equipmentTypeId"
               onChange={this.handleFieldChange}
+              value={this.state.equipmentName}
             >
             <option defaultValue="">Select equipment</option>
             {this.props.equipmentTypes.map(evt => (
@@ -122,6 +130,7 @@ export default class ExerciseEditForm extends Component {
               onChange={this.handleFieldChange}
               id="sets"
               placeholder="Number of sets"
+              value={this.state.sets}
             />
           </div>
           {/* text and input for reps: */}
@@ -134,6 +143,7 @@ export default class ExerciseEditForm extends Component {
               onChange={this.handleFieldChange}
               id="reps"
               placeholder="Number of reps"
+              value={this.state.reps}
             />
           </div>
           {/* text and input for weight: */}
@@ -145,7 +155,8 @@ export default class ExerciseEditForm extends Component {
               className="form-control"
               onChange={this.handleFieldChange}
               id="weightLifted"
-              placeholder="Enter the number of reps"
+              placeholder="Enter the weight"
+              value={this.state.weightLifted}
             />
           </div>
           {/* text and input for notes: */}
@@ -158,6 +169,7 @@ export default class ExerciseEditForm extends Component {
               onChange={this.handleFieldChange}
               id="notes"
               placeholder="Additional Notes"
+              value={this.state.notes}
             />
           </div>
           <div>

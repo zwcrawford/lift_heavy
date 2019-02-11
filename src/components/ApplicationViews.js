@@ -96,6 +96,7 @@ export default class ApplicationViews extends Component {
               <ExerciseList
                 {...props}
                 deleteExercise={this.deleteExercise}
+                addExercise={this.addExercise}
                 bodyCategories={this.state.bodyCategories}
                 equipmentTypes={this.state.equipmentTypes}
                   categoryName={this.state.categoryName}
@@ -114,10 +115,13 @@ export default class ApplicationViews extends Component {
             return (
               <ExerciseAddForm
                 {...props}
-                   addExercise={this.addExercise}
                 deleteExercise={this.deleteExercise}
+                addExercise={this.addExercise}
                 bodyCategories={this.state.bodyCategories}
                 equipmentTypes={this.state.equipmentTypes}
+                  categoryName={this.state.categoryName}
+                  updateExercise={this.updateExercise}
+                 equipmentName={this.state.equipmentName}
                      exercises={this.state.exercises}
               />
             );
@@ -131,11 +135,14 @@ export default class ApplicationViews extends Component {
               return (
                 <ExerciseEditForm
                   {...props}
-                  updateExercise={this.updateExercise}
                   deleteExercise={this.deleteExercise}
-                  bodyCategories={this.state.bodyCategories}
-                  equipmentTypes={this.state.equipmentTypes}
-                       exercises={this.state.exercises}
+                addExercise={this.addExercise}
+                bodyCategories={this.state.bodyCategories}
+                equipmentTypes={this.state.equipmentTypes}
+                  categoryName={this.state.categoryName}
+                  updateExercise={this.updateExercise}
+                 equipmentName={this.state.equipmentName}
+                     exercises={this.state.exercises}
                 />
               );
             }}

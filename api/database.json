@@ -14,14 +14,42 @@
   "exercises": [
     {
       "userId": 1,
-      "exerciseName": "",
-      "bodyCategoryId": "",
-      "equipmentTypeId": "",
-      "sets": "",
-      "reps": "",
-      "weightLifted": "",
-      "notes": "",
+      "exerciseName": "Test1",
+      "bodyCategoryId": "1",
+      "categoryName": "",
+      "equipmentTypeId": "1",
+      "equipmentName": "",
+      "sets": "1",
+      "reps": "1",
+      "weightLifted": "1",
+      "notes": "Test1",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "exerciseName": "Test2",
+      "bodyCategoryId": "2",
+      "categoryName": "",
+      "equipmentTypeId": "2",
+      "equipmentName": "",
+      "sets": "2",
+      "reps": "2",
+      "weightLifted": "2",
+      "notes": "Test2",
       "id": 2
+    },
+    {
+      "userId": 1,
+      "exerciseName": "Test3",
+      "bodyCategoryId": "3",
+      "categoryName": "",
+      "equipmentTypeId": "3",
+      "equipmentName": "",
+      "sets": "3",
+      "reps": "3",
+      "weightLifted": "3",
+      "notes": "Test3",
+      "id": 3
     }
   ],
   "bodyCategories": [

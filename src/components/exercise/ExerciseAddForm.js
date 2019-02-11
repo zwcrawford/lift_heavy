@@ -7,6 +7,8 @@ export default class ExerciseAddForm extends Component {
     id: 1,
     userId: 1,
     exerciseName: "",
+    categoryName: "",
+    equipmentName: "",
     bodyCategoryId: "",
     equipmentTypeId: "",
     sets: "",
@@ -26,7 +28,6 @@ export default class ExerciseAddForm extends Component {
   constructNewExercise = evt => {
     evt.preventDefault();
     const exercise = {
-      id: this.state.id,
       userId: this.state.userId,
       exerciseName: this.state.exerciseName,
       bodyCategoryId: this.state.bodyCategoryId,
