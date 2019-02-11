@@ -50,14 +50,9 @@ export default class ExerciseCard extends Component {
             <label>
               Notes: {this.props.exercise.notes}
             </label>
-            <div className="editButton">
+            <div className="links">
               <Link className="nav-link" to={`/exercises/${this.props.exercise.id}/edit`}>Edit</Link>
-            </div>
-            <div className="deleteButton">
-              <button
-                className="card-button"
-                onClick={() => {this.props.deleteExercise(this.props.exercise.id)}}
-              >Delete</button>
+              <Link className="nav-link" to={`/`} onClick={() => {this.props.deleteExercise(this.props.exercise.id)}}>Delete</Link>
             </div>
           </div>
         </div>
