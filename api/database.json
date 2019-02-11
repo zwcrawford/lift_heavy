@@ -11,7 +11,19 @@
       "password": "you"
     }
   ],
-  "exercises": [],
+  "exercises": [
+    {
+      "userId": 1,
+      "exerciseName": "",
+      "bodyCategoryId": "",
+      "equipmentTypeId": "",
+      "sets": "",
+      "reps": "",
+      "weightLifted": "",
+      "notes": "",
+      "id": 2
+    }
+  ],
   "bodyCategories": [
     {
       "id": 1,

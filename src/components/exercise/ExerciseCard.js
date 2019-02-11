@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom"
 import "./Exercise.css";
 
 // "exercises": [
@@ -17,7 +18,7 @@ import "./Exercise.css";
 export default class ExerciseCard extends Component {
   render() {
     // console here
-    console.log("", this.props);
+    console.log("Test", this.props);
 
     return (
       <React.Fragment>
@@ -31,7 +32,7 @@ export default class ExerciseCard extends Component {
             </label>
             <br />
             <label>
-              Equipment: {this.props.exercise.equipmentType ? this.props.exercise.equipmentType.equipmentName : "wtf"}
+              Equipment: {this.props.exercise.equipmentType ? this.props.exercise.equipmentType.equipmentName : ""}
             </label>
             <br />
             <label>
@@ -50,14 +51,9 @@ export default class ExerciseCard extends Component {
               Notes: {this.props.exercise.notes}
             </label>
             <div className="editButton">
-              <button
-                href={`/exercises/${this.props.exercise.id}/edit`}
-                onClick={() =>
-                  this.props.updateExercise(this.props.exercise.id, this.props.exercise)}
-                  className="card-button"
-              >Edit</button>
+              <Link className="nav-link" to={`/exercises/${this.props.exercise.id}/edit`}>Edit</Link>
             </div>
-              <div className="deleteButton">
+            <div className="deleteButton">
               <button
                 className="card-button"
                 onClick={() => {this.props.deleteExercise(this.props.exercise.id)}}

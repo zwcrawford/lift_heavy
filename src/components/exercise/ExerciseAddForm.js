@@ -1,27 +1,14 @@
 import React, { Component } from "react";
 import "./Exercise.css";
 
-// "exercises": [
-//   {
-//       "id": 1,
-//       "userId": 1,
-//       "exerciseName": "squat",
-//       "bodyCategoryId": 9,
-//       "equipmentTypeId": 2,
-//       "sets": 1,
-//       "reps": 10,
-//       "weightLifted": 275,
-//       "notes": "Light. Go to 300 next time"
-//   },
 export default class ExerciseAddForm extends Component {
   // Set initial state.
   state = {
+    id: 1,
     userId: 1,
     exerciseName: "",
     bodyCategoryId: "",
     equipmentTypeId: "",
-    categoryName: "",
-    equipmentName: "",
     sets: "",
     reps: "",
     weightLifted: "",
@@ -39,6 +26,7 @@ export default class ExerciseAddForm extends Component {
   constructNewExercise = evt => {
     evt.preventDefault();
     const exercise = {
+      id: this.state.id,
       userId: this.state.userId,
       exerciseName: this.state.exerciseName,
       bodyCategoryId: this.state.bodyCategoryId,
@@ -56,12 +44,16 @@ export default class ExerciseAddForm extends Component {
   }
 
   render() {
+    console.log("Add Test", this.state);
+
     return (
       <React.Fragment>
+        {/* form starts here: */}
         <form className="exerciseAddForm">
-          {/* Form header: */}
+
+          {/* form header: */}
           <h4>Add an Exercise:</h4>
-          {/* Form starts here: */}
+
           {/* text and input for exercise name: */}
           <div className="form-group">
             <label htmlFor="exerciseName">Exercise Name:</label>
@@ -146,6 +138,7 @@ export default class ExerciseAddForm extends Component {
               placeholder="Enter the number of reps"
             />
           </div>
+          {/* text and input for notes: */}
           <div className="form-group">
             <label htmlFor="notes">Notes:</label>
             <input
@@ -158,6 +151,7 @@ export default class ExerciseAddForm extends Component {
             />
           </div>
           <div>
+            {/* submit button: */}
             <button
               type="submit"
               className="btn btn-primary"
@@ -165,6 +159,7 @@ export default class ExerciseAddForm extends Component {
               id="add-form-btn"
             >Save
             </button>
+            {/* clear button: */}
             <button
               type="submit"
               className="btn btn-primary"

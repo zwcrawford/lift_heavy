@@ -3,7 +3,7 @@ import React, { Component } from "react"
 import ExerciseManager from "../modules/ExerciseManager";
 import ExerciseList from './exercise/ExerciseList'
 import ExerciseAddForm from './exercise/ExerciseAddForm'
-
+import ExerciseEditForm from './exercise/ExerciseEditForm'
 export default class ApplicationViews extends Component {
     state = {
       users: [],
@@ -64,9 +64,7 @@ export default class ApplicationViews extends Component {
   /* ********** EDIT EXERCISES ********** */
   updateExercise = (exerciseId, editedExerciseObj) => {
     return ExerciseManager.put(exerciseId, editedExerciseObj)
-    .then(e => e.json())
     .then(() => ExerciseManager.getAll())
-    .then(e => e.json())
     .then(exercises => {
       this.setState({
         exercises: exercises
@@ -101,6 +99,7 @@ export default class ApplicationViews extends Component {
                 bodyCategories={this.state.bodyCategories}
                 equipmentTypes={this.state.equipmentTypes}
                   categoryName={this.state.categoryName}
+                  updateExercise={this.updateExercise}
                  equipmentName={this.state.equipmentName}
                      exercises={this.state.exercises}
               />
@@ -110,7 +109,7 @@ export default class ApplicationViews extends Component {
 
         {/* this is the exerciseAddForm */}
         <Route
-          path="/exercises/new"
+          exact path="/exercises/new"
           render={props => {
             return (
               <ExerciseAddForm
@@ -126,16 +125,21 @@ export default class ApplicationViews extends Component {
         />
 
         {/* this is the ExerciseEditForm */}
-        {/* <Route
+        <Route
             path="/exercises/:exerciseId(\d+)/edit"
             render={props => {
               return (
-                {/*<ExerciseEditForm*/},
-                  {/* {...props},
-                  updateExercise={this.updateExercise}/>
+                <ExerciseEditForm
+                  {...props}
+                  updateExercise={this.updateExercise}
+                  deleteExercise={this.deleteExercise}
+                  bodyCategories={this.state.bodyCategories}
+                  equipmentTypes={this.state.equipmentTypes}
+                       exercises={this.state.exercises}
+                />
               );
             }}
-          /> */}
+          />
       </React.Fragment>
     )
   }
