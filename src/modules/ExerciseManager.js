@@ -17,7 +17,7 @@ export default {
     }).then(data => data.json());
   },
   put(exerciseId, existingExercise) {
-    return fetch(`${remoteURL}/${exerciseId}/edit`, {
+    return fetch(`${remoteURL}/exercises/${exerciseId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
