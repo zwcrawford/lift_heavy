@@ -53,8 +53,8 @@ export default class ExerciseEditForm extends Component {
           id: exercise.id,
           userId: exercise.userId,
           exerciseName: exercise.exerciseName,
-          categoryName: exercise.categoryName.value,
-          equipmentName: exercise.equipmentName.value,
+          categoryName: exercise.categoryName,
+          equipmentName: exercise.equipmentName,
           sets: exercise.sets,
           reps: exercise.reps,
           weightLifted: exercise.weightLifted,
@@ -92,7 +92,7 @@ export default class ExerciseEditForm extends Component {
               name="bodyCategoryId"
               id="bodyCategoryId"
               onChange={this.handleFieldChange}
-              value={this.state.bodyCategory}
+              value={this.state.categoryName}
             >
             <option defaultValue="">Select a body group</option>
             {this.props.bodyCategories.map(evt => (
@@ -177,7 +177,7 @@ export default class ExerciseEditForm extends Component {
             <button
               type="submit"
               className="btn btn-primary"
-              onClick={this.updateExercise}
+              onClick={this.updateCurrentExercise}
               id="add-form-btn"
             >Save
             </button>
