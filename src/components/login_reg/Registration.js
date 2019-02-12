@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { Link } from "react-router-dom"
 
 export default class Registration extends Component {
 
@@ -45,8 +44,8 @@ export default class Registration extends Component {
         <form className="exerciseAddForm" onSubmit={this.handleRegistration}>
 
           {/* form header: */}
-          <h4>Welcome to LiftHeavy</h4>
-          <p>Please register here:</p>
+          <h4>Register with LiftHeavy</h4>
+          <p>Please enter your information:</p>
           <label
             htmlFor="email"
           >Email: </label>
@@ -72,8 +71,9 @@ export default class Registration extends Component {
           /><br />
           <button
             type="submit"
+            className="btn btn-primary"
             onClick={this.createNewUser}
-          >Login</button>
+          >Sign up</button>
         </form>
       </React.Fragment>
     )

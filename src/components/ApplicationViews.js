@@ -2,7 +2,7 @@ import { Route } from 'react-router-dom'
 import React, { Component } from "react"
 import Login from './login_reg/Login'
 import Registration from './login_reg/Registration'
-import ExerciseManager from "../modules/ExerciseManager";
+import ExerciseManager from "../modules/ExerciseManager"
 import ExerciseList from './exercise/ExerciseList'
 import ExerciseAddForm from './exercise/ExerciseAddForm'
 import ExerciseEditForm from './exercise/ExerciseEditForm'
@@ -83,7 +83,10 @@ export default class ApplicationViews extends Component {
       })
     })
   }
-
+  /* PASSING TO REGISTRATION.JS */
+  postUser = newUser => {
+    return ExerciseManager.postUser(newUser)
+  }
 
   componentDidMount() {
     ExerciseManager.getAll().then(allExercises => {
@@ -160,14 +163,17 @@ export default class ApplicationViews extends Component {
             return (
               <ExerciseList
                 {...props}
-                deleteExercise={this.deleteExercise}
-                   addExercise={this.addExercise}
-                bodyCategories={this.state.bodyCategories}
-                equipmentTypes={this.state.equipmentTypes}
-                  categoryName={this.state.categoryName}
-                updateExercise={this.updateExercise}
-                 equipmentName={this.state.equipmentName}
-                     exercises={this.state.exercises}
+                       postUser={this.postUser}
+                          users={this.state.users}
+                updateComponent={this.updateComponent}
+                 deleteExercise={this.deleteExercise}
+                    addExercise={this.addExercise}
+                 bodyCategories={this.state.bodyCategories}
+                 equipmentTypes={this.state.equipmentTypes}
+                   categoryName={this.state.categoryName}
+                 updateExercise={this.updateExercise}
+                  equipmentName={this.state.equipmentName}
+                      exercises={this.state.exercises}
               />
             );
           }}
@@ -180,14 +186,17 @@ export default class ApplicationViews extends Component {
             return (
               <ExerciseAddForm
                 {...props}
-                deleteExercise={this.deleteExercise}
-                   addExercise={this.addExercise}
-                bodyCategories={this.state.bodyCategories}
-                equipmentTypes={this.state.equipmentTypes}
-                  categoryName={this.state.categoryName}
-                updateExercise={this.updateExercise}
-                 equipmentName={this.state.equipmentName}
-                     exercises={this.state.exercises}
+                       postUser={this.postUser}
+                          users={this.state.users}
+                updateComponent={this.updateComponent}
+                 deleteExercise={this.deleteExercise}
+                    addExercise={this.addExercise}
+                 bodyCategories={this.state.bodyCategories}
+                 equipmentTypes={this.state.equipmentTypes}
+                   categoryName={this.state.categoryName}
+                 updateExercise={this.updateExercise}
+                  equipmentName={this.state.equipmentName}
+                      exercises={this.state.exercises}
               />
             );
           }}
@@ -200,14 +209,17 @@ export default class ApplicationViews extends Component {
             return (
               <ExerciseEditForm
                 {...props}
-                deleteExercise={this.deleteExercise}
-                   addExercise={this.addExercise}
-                bodyCategories={this.state.bodyCategories}
-                equipmentTypes={this.state.equipmentTypes}
-                  categoryName={this.state.categoryName}
-                updateExercise={this.updateExercise}
-                 equipmentName={this.state.equipmentName}
-                     exercises={this.state.exercises}
+                       postUser={this.postUser}
+                          users={this.state.users}
+                updateComponent={this.updateComponent}
+                 deleteExercise={this.deleteExercise}
+                    addExercise={this.addExercise}
+                 bodyCategories={this.state.bodyCategories}
+                 equipmentTypes={this.state.equipmentTypes}
+                   categoryName={this.state.categoryName}
+                 updateExercise={this.updateExercise}
+                  equipmentName={this.state.equipmentName}
+                      exercises={this.state.exercises}
               />
               );
             }}

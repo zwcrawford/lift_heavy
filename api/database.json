@@ -9,6 +9,11 @@
       "id": 2,
       "email": "you@you.com",
       "password": "you"
+    },
+    {
+      "email": "tre@tre.com",
+      "password": "tre",
+      "id": 3
     }
   ],
   "exercises": [

@@ -28,7 +28,7 @@ export default class UserLogin extends Component {
     let authorized = this.props.users.find(user => user.email === newUser)
 
     if (authorized === undefined) {
-      alert("This email address already exists. Please try again.")
+      alert("This email is not registered. Please register and try again.")
     }
     else {
       sessionStorage.setItem("email", authorized.id)
@@ -72,6 +72,7 @@ export default class UserLogin extends Component {
           /><br />
           <button
             type="submit"
+            className="btn btn-primary"
             onClick={this.handleUserLogin}
           >Login</button>
           <Link

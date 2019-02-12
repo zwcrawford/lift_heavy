@@ -34,7 +34,7 @@ export default class ExerciseEditForm extends Component {
       notes: this.state.notes
     }
     this.props.updateExercise(this.props.match.params.exerciseId, currentExercise)
-    .then(() => this.props.history.push("/"));
+    .then(() => this.props.history.push("/home"));
   }
 
   handleFieldChange = evt => {
