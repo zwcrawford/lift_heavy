@@ -53,8 +53,8 @@ export default class ExerciseEditForm extends Component {
           id: exercise.id,
           userId: exercise.userId,
           exerciseName: exercise.exerciseName,
-          categoryName: exercise.categoryName.value,
-          equipmentName: exercise.equipmentName.value,
+          categoryName: exercise.categoryName,
+          equipmentName: exercise.equipmentName,
           sets: exercise.sets,
           reps: exercise.reps,
           weightLifted: exercise.weightLifted,
@@ -92,9 +92,8 @@ export default class ExerciseEditForm extends Component {
               name="bodyCategoryId"
               id="bodyCategoryId"
               onChange={this.handleFieldChange}
-              value={this.state.bodyCategory}
             >
-            <option defaultValue="">Select a body group</option>
+            <option defaultValue=''>Select a body group</option>
             {this.props.bodyCategories.map(evt => (
               <option key={evt.id} value={evt.id}>
               {evt.categoryName}
@@ -177,18 +176,18 @@ export default class ExerciseEditForm extends Component {
             <button
               type="submit"
               className="btn btn-primary"
-              onClick={this.updateExercise}
+              onClick={this.updateCurrentExercise}
               id="add-form-btn"
-            >Save
+            >Update
             </button>
             {/* clear button: */}
-            <button
+            {/* <button
               type="submit"
               className="btn btn-primary"
               onClick={this.clearForm}
               id="clr-form-btn"
             >Clear
-            </button>
+            </button> */}
           </div>
         </form>
       </React.Fragment>
