@@ -110,7 +110,6 @@ export default class ApplicationViews extends Component {
         <Route
           exact path="/"
           render={props => {
-            // if (this.isAuthenticated()) {
             return (
               <Login
                 {...props}
@@ -132,9 +131,8 @@ export default class ApplicationViews extends Component {
 
         {/* this is the registration page */}
         <Route
-          exact path="/registration"
+          exact path="/register"
           render={props => {
-            // if (this.isAuthenticated()) {
             return (
               <Registration
                 {...props}
@@ -197,11 +195,11 @@ export default class ApplicationViews extends Component {
 
         {/* this is the ExerciseEditForm */}
         <Route
-            path="/exercises/:exerciseId(\d+)/edit"
-            render={props => {
-              return (
-                <ExerciseEditForm
-                  {...props}
+          path="/exercises/:exerciseId(\d+)/edit"
+          render={props => {
+            return (
+              <ExerciseEditForm
+                {...props}
                 deleteExercise={this.deleteExercise}
                    addExercise={this.addExercise}
                 bodyCategories={this.state.bodyCategories}
@@ -210,7 +208,7 @@ export default class ApplicationViews extends Component {
                 updateExercise={this.updateExercise}
                  equipmentName={this.state.equipmentName}
                      exercises={this.state.exercises}
-                />
+              />
               );
             }}
           />
