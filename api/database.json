@@ -15,49 +15,28 @@
     {
       "id": 1,
       "userId": 1,
-      "exerciseName": "Test1",
+      "exerciseName": "Test",
       "bodyCategoryId": "",
+      "categoryName": "",
       "equipmentTypeId": "",
-      "sets": [
-        "2"
-      ],
-      "reps": "1",
-      "weightLifted": "1",
-      "notes": "Test1"
+      "equipmentName": "",
+      "sets": "8",
+      "reps": "8",
+      "weightLifted": "80",
+      "notes": "Test"
     },
     {
-      "id": 2,
       "userId": 1,
       "exerciseName": "Test2",
-      "bodyCategoryId": "",
+      "bodyCategoryId": "2",
       "categoryName": "",
-      "equipmentTypeId": "",
+      "equipmentTypeId": "2",
       "equipmentName": "",
-      "sets": [
-        "4"
-      ],
-      "reps": [
-        "4"
-      ],
-      "weightLifted": [
-        "4"
-      ],
-      "notes": [
-        "Test4"
-      ]
-    },
-    {
-      "userId": 1,
-      "exerciseName": "Test3",
-      "bodyCategoryId": "3",
-      "categoryName": "",
-      "equipmentTypeId": "3",
-      "equipmentName": "",
-      "sets": "3",
-      "reps": "3",
-      "weightLifted": "3",
-      "notes": "Test3",
-      "id": 3
+      "sets": "9",
+      "reps": "9",
+      "weightLifted": "90",
+      "notes": "Test2",
+      "id": 2
     }
   ],
   "bodyCategories": [
