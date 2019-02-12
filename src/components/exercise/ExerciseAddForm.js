@@ -30,23 +30,23 @@ export default class ExerciseAddForm extends Component {
     const exercise = {
       userId: this.state.userId,
       exerciseName: this.state.exerciseName,
-      bodyCategoryId: this.state.bodyCategoryId,
+      bodyCategoryId: Number(this.state.bodyCategoryId),
       categoryName: this.state.categoryName,
-      equipmentTypeId: this.state.equipmentTypeId,
+      equipmentTypeId: Number(this.state.equipmentTypeId),
       equipmentName: this.state.equipmentName,
-      sets: this.state.sets,
-      reps: this.state.reps,
-      weightLifted: this.state.weightLifted,
+      sets: Number(this.state.sets),
+      reps: Number(this.state.reps),
+      weightLifted: Number(this.state.weightLifted),
       notes: this.state.notes
     };
     // Create the exercise and route the user back to the exerciseList
     this.props.addExercise(exercise)
-    .then(() => this.props.history.push("/"));
+    .then(() => this.props.history.push("/home"));
   }
 
   render() {
-    console.log("Add Test", this.state);
 
+    //console.log("Add Test", this.state);
     return (
       <React.Fragment>
         {/* form starts here: */}
