@@ -1,5 +1,7 @@
 import { Route } from 'react-router-dom'
 import React, { Component } from "react"
+import Login from './login_reg/Login'
+import Registration from './login_reg/Registration'
 import ExerciseManager from "../modules/ExerciseManager";
 import ExerciseList from './exercise/ExerciseList'
 import ExerciseAddForm from './exercise/ExerciseAddForm'
@@ -72,12 +74,29 @@ export default class ApplicationViews extends Component {
     });
   }
 
+  /* ********** USER LOGIN ********** */
+  updateComponent = () => {
+    ExerciseManager.getAllUserExercises()
+    .then(exercises => {
+      this.setState({
+        exercises: exercises
+      })
+    })
+  }
+
+
   componentDidMount() {
     ExerciseManager.getAll().then(allExercises => {
       this.setState({
         exercises: allExercises
       });
     });
+    ExerciseManager.getAllUsers()
+    .then(users => {
+      this.setState({
+        users: users
+      })
+    })
     this.getAllBodyCategories()
     this.getAllEquipmentTypes()
   }
@@ -87,20 +106,68 @@ export default class ApplicationViews extends Component {
     return (
       <React.Fragment>
 
-        {/* this is the list of exercises */}
+        {/* this is the login page */}
         <Route
           exact path="/"
+          render={props => {
+            // if (this.isAuthenticated()) {
+            return (
+              <Login
+                {...props}
+                       postUser={this.postUser}
+                          users={this.state.users}
+                updateComponent={this.updateComponent}
+                 deleteExercise={this.deleteExercise}
+                    addExercise={this.addExercise}
+                 bodyCategories={this.state.bodyCategories}
+                 equipmentTypes={this.state.equipmentTypes}
+                   categoryName={this.state.categoryName}
+                 updateExercise={this.updateExercise}
+                  equipmentName={this.state.equipmentName}
+                      exercises={this.state.exercises}
+              />
+            );
+          }}
+        />
+
+        {/* this is the registration page */}
+        <Route
+          exact path="/registration"
+          render={props => {
+            // if (this.isAuthenticated()) {
+            return (
+              <Registration
+                {...props}
+                       postUser={this.postUser}
+                          users={this.state.users}
+                updateComponent={this.updateComponent}
+                 deleteExercise={this.deleteExercise}
+                    addExercise={this.addExercise}
+                 bodyCategories={this.state.bodyCategories}
+                 equipmentTypes={this.state.equipmentTypes}
+                   categoryName={this.state.categoryName}
+                 updateExercise={this.updateExercise}
+                  equipmentName={this.state.equipmentName}
+                      exercises={this.state.exercises}
+              />
+            );
+          }}
+        />
+
+        {/* this is the list of exercises */}
+        <Route
+          exact path="/home"
           render={props => {
             // if (this.isAuthenticated()) {
             return (
               <ExerciseList
                 {...props}
                 deleteExercise={this.deleteExercise}
-                addExercise={this.addExercise}
+                   addExercise={this.addExercise}
                 bodyCategories={this.state.bodyCategories}
                 equipmentTypes={this.state.equipmentTypes}
                   categoryName={this.state.categoryName}
-                  updateExercise={this.updateExercise}
+                updateExercise={this.updateExercise}
                  equipmentName={this.state.equipmentName}
                      exercises={this.state.exercises}
               />
@@ -116,11 +183,11 @@ export default class ApplicationViews extends Component {
               <ExerciseAddForm
                 {...props}
                 deleteExercise={this.deleteExercise}
-                addExercise={this.addExercise}
+                   addExercise={this.addExercise}
                 bodyCategories={this.state.bodyCategories}
                 equipmentTypes={this.state.equipmentTypes}
                   categoryName={this.state.categoryName}
-                  updateExercise={this.updateExercise}
+                updateExercise={this.updateExercise}
                  equipmentName={this.state.equipmentName}
                      exercises={this.state.exercises}
               />
@@ -135,12 +202,12 @@ export default class ApplicationViews extends Component {
               return (
                 <ExerciseEditForm
                   {...props}
-                  deleteExercise={this.deleteExercise}
-                addExercise={this.addExercise}
+                deleteExercise={this.deleteExercise}
+                   addExercise={this.addExercise}
                 bodyCategories={this.state.bodyCategories}
                 equipmentTypes={this.state.equipmentTypes}
                   categoryName={this.state.categoryName}
-                  updateExercise={this.updateExercise}
+                updateExercise={this.updateExercise}
                  equipmentName={this.state.equipmentName}
                      exercises={this.state.exercises}
                 />
