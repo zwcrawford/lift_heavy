@@ -20,28 +20,43 @@
     {
       "id": 1,
       "userId": 1,
-      "exerciseName": "Test",
-      "bodyCategoryId": "",
+      "exerciseName": "Squat",
+      "bodyCategoryId": 9,
       "categoryName": "",
-      "equipmentTypeId": "",
+      "equipmentTypeId": 2,
       "equipmentName": "",
-      "sets": "8",
-      "reps": "8",
-      "weightLifted": "80",
-      "notes": "Test"
+      "sets": 10,
+      "reps": 10,
+      "weightLifted": 200,
+      "notes": "Leg day, exercise 1"
     },
     {
+      "id": 2,
       "userId": 1,
-      "exerciseName": "Test2",
-      "bodyCategoryId": "2",
+      "exerciseName": "Snatch",
+      "bodyCategoryId": 2,
       "categoryName": "",
-      "equipmentTypeId": "2",
+      "equipmentTypeId": 2,
       "equipmentName": "",
-      "sets": "9",
-      "reps": "9",
-      "weightLifted": "90",
-      "notes": "Test2",
-      "id": 2
+      "sets": 8,
+      "reps": 8,
+      "weightLifted": 250,
+      "notes": "Leg day, exercise 2"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "exerciseName": "Overhead Press",
+      "bodyCategoryId": 8,
+      "categoryName": "",
+      "equipmentTypeId": 7,
+      "equipmentName": "",
+      "sets": 10,
+      "reps": 8,
+      "weightLifted": 175,
+      "notes": [
+        "Some edit text"
+      ]
     }
   ],
   "bodyCategories": [

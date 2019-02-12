@@ -15,8 +15,8 @@ export default {
     .then(e => e.json());
   },
   // Get email and password to verify user
-  getUserLoginData(currentUser) {
-    return fetch(`${remoteURL}/users?email=${currentUser.email}&password=${currentUser.password}`)
+  checkUserData(userEmailInput, userPassInput) {
+    return fetch(`${remoteURL}/users?email=${userEmailInput}&password=${userPassInput}`)
   },
   // Get all exercises specific to a user
   getAllUserExercises() {

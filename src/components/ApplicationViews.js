@@ -87,6 +87,10 @@ export default class ApplicationViews extends Component {
   postUser = newUser => {
     return ExerciseManager.postUser(newUser)
   }
+  checkUserData(email, password) {
+    return ExerciseManager.checkUserData
+  }
+
 
   componentDidMount() {
     ExerciseManager.getAll().then(allExercises => {
@@ -104,7 +108,7 @@ export default class ApplicationViews extends Component {
     this.getAllEquipmentTypes()
   }
   render() {
-    console.log("App View", this.state.exercises);
+    //console.log("App View", this.state.exercises);
 
     return (
       <React.Fragment>
@@ -127,6 +131,8 @@ export default class ApplicationViews extends Component {
                  updateExercise={this.updateExercise}
                   equipmentName={this.state.equipmentName}
                       exercises={this.state.exercises}
+                handleUserLogin={this.handleUserLogin}
+                  checkUserData={this.checkUserData}
               />
             );
           }}
@@ -150,6 +156,8 @@ export default class ApplicationViews extends Component {
                  updateExercise={this.updateExercise}
                   equipmentName={this.state.equipmentName}
                       exercises={this.state.exercises}
+                handleUserLogin={this.handleUserLogin}
+                  checkUserData={this.checkUserData}
               />
             );
           }}
@@ -174,6 +182,9 @@ export default class ApplicationViews extends Component {
                  updateExercise={this.updateExercise}
                   equipmentName={this.state.equipmentName}
                       exercises={this.state.exercises}
+                    getAllUsers={this.state.users}
+                handleUserLogin={this.handleUserLogin}
+                  checkUserData={this.checkUserData}
               />
             );
           }}
@@ -197,6 +208,9 @@ export default class ApplicationViews extends Component {
                  updateExercise={this.updateExercise}
                   equipmentName={this.state.equipmentName}
                       exercises={this.state.exercises}
+                    getAllUsers={this.state.users}
+                handleUserLogin={this.handleUserLogin}
+                  checkUserData={this.checkUserData}
               />
             );
           }}
@@ -220,6 +234,9 @@ export default class ApplicationViews extends Component {
                  updateExercise={this.updateExercise}
                   equipmentName={this.state.equipmentName}
                       exercises={this.state.exercises}
+                    getAllUsers={this.state.users}
+                handleUserLogin={this.handleUserLogin}
+                  checkUserData={this.checkUserData}
               />
               );
             }}
