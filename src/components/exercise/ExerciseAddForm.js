@@ -72,14 +72,15 @@ export default class ExerciseAddForm extends Component {
             <label htmlFor="bodyCategoryId">Body Group:</label>
             <br />
             <select
+              defaultValue=""
               name="bodyCategoryId"
               id="bodyCategoryId"
               onChange={this.handleFieldChange}
-              value={this.state.bodyCategoryId}
             >
+            <option defaultValue="">Select body group</option>
             {this.props.bodyCategories.map(evt => (
               <option key={evt.id} value={evt.id}>
-              {evt.class}
+              {evt.categoryName}
               </option>
             ))}
             </select>

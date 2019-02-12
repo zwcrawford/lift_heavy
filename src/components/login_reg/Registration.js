@@ -34,7 +34,7 @@ export default class Registration extends Component {
       password: this.state.password
     }
     this.props.postUser(newUser)
-    .then(() => this.props.history.push("/"))
+    .then(() => this.props.history.push("/home"))
   }
 
   render() {

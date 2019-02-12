@@ -52,7 +52,7 @@ export default class ExerciseCard extends Component {
             </label>
             <div className="links">
               <Link className="nav-link" to={`/exercises/${this.props.exercise.id}/edit`}>Edit</Link>
-              <Link className="nav-link" to={`/`} onClick={() => {this.props.deleteExercise(this.props.exercise.id)}}>Delete</Link>
+              <Link className="nav-link" to={`/home`} onClick={() => {this.props.deleteExercise(this.props.exercise.id)}}>Delete</Link>
             </div>
           </div>
         </div>
