@@ -14,28 +14,30 @@ export default class UserLogin extends Component {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
+    console.log(this.state)
   }
 
   // Login handler
   handleUserLogin = evt => {
     evt.preventDefault()
-    // Saving email in session storage
-    sessionStorage.setItem(
-      "email", this.state.email
-    )
-    // Check the users table to see if that email exists.
-    let newUser = sessionStorage.getItem("email")
-    let authorized = this.props.users.find(user => user.email === newUser)
+    this.props.checkUserData(this.state.email, this.state.password)
+    .then(user => {
+      if (user.length === 0) {
+      alert("Your email is not in our system or your password is incorrect. Please try again or register by clicking the link below.")
+    } else {
+      user.forEach( evt => {
+        let loggedIn = false;
+        if (this.state.email === evt.email && this.state.password === evt.password) {
+          loggedIn = true
+        }
+        if (loggedIn === true) {
+          sessionStorage.setItem("User", evt.id)
+          this.props.history.push("/home")
+        }
+      })
+    }
+  })
 
-    if (authorized === undefined) {
-      alert("This email is not registered. Please register and try again.")
-    }
-    else {
-      sessionStorage.setItem("email", authorized.id)
-      //let verifiedUser = sessionStorage.getItem("email")
-      this.props.updateComponent()
-      this.props.history.push("/home")
-    }
   }
 
   render () {
@@ -56,8 +58,8 @@ export default class UserLogin extends Component {
             name="email"
             id="email"
             placeholder="Enter your email"
-            required=""
-            autofocus=""
+            required
+            autoFocus=""
           /><br />
           <label
             htmlFor="password"
@@ -78,7 +80,7 @@ export default class UserLogin extends Component {
           <Link
             className="register"
             to={`/register`}
-          >Click here to register</Link>
+          >Register here</Link>
         </form>
       </React.Fragment>
     )

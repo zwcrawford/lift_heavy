@@ -56,7 +56,7 @@ export default class Registration extends Component {
             id="email"
             placeholder="Enter your email"
             required=""
-            autofocus=""
+            autoFocus=""
           /><br />
           <label
             htmlFor="password"

@@ -14,14 +14,51 @@
       "email": "tre@tre.com",
       "password": "tre",
       "id": 3
-    },
-    {
-      "email": "quad@quad.com",
-      "password": "quad",
-      "id": 4
     }
   ],
-  "exercises": [],
+  "exercises": [
+    {
+      "id": 1,
+      "userId": 1,
+      "exerciseName": "Squat",
+      "bodyCategoryId": 9,
+      "categoryName": "",
+      "equipmentTypeId": 2,
+      "equipmentName": "",
+      "sets": 10,
+      "reps": 10,
+      "weightLifted": 200,
+      "notes": "Leg day, exercise 1"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "exerciseName": "Snatch",
+      "bodyCategoryId": 2,
+      "categoryName": "",
+      "equipmentTypeId": 2,
+      "equipmentName": "",
+      "sets": 8,
+      "reps": 8,
+      "weightLifted": 250,
+      "notes": "Leg day, exercise 2"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "exerciseName": "Overhead Press",
+      "bodyCategoryId": 8,
+      "categoryName": "",
+      "equipmentTypeId": 7,
+      "equipmentName": "",
+      "sets": 10,
+      "reps": 8,
+      "weightLifted": 175,
+      "notes": [
+        "Some edit text"
+      ]
+    }
+  ],
   "bodyCategories": [
     {
       "id": 1,

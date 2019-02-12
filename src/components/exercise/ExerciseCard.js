@@ -18,7 +18,7 @@ import "./Exercise.css";
 export default class ExerciseCard extends Component {
   render() {
     // console here
-    console.log("Test", this.props);
+    //console.log("Test", this.props);
 
     return (
       <React.Fragment>

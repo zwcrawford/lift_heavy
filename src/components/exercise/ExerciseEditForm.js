@@ -10,8 +10,8 @@ export default class ExerciseEditForm extends Component {
     exerciseName: "",
     categoryName: "",
     equipmentName: "",
-    bodyCategoryId: "",
-    equipmentTypeId: "",
+    bodyCategoryId: 0,
+    equipmentTypeId: 0,
     sets: "",
     reps: "",
     weightLifted: "",
@@ -24,13 +24,13 @@ export default class ExerciseEditForm extends Component {
       id: this.state.id,
       userId: this.state.userId,
       exerciseName: this.state.exerciseName,
-      bodyCategoryId: this.state.bodyCategoryId,
+      bodyCategoryId: Number(this.state.bodyCategoryId),
       categoryName: this.state.categoryName,
-      equipmentTypeId: this.state.equipmentTypeId,
+      equipmentTypeId: Number(this.state.equipmentTypeId),
       equipmentName: this.state.equipmentName,
-      sets: this.state.sets,
-      reps: this.state.reps,
-      weightLifted: this.state.weightLifted,
+      sets: Number(this.state.sets),
+      reps: Number(this.state.reps),
+      weightLifted: Number(this.state.weightLifted),
       notes: this.state.notes
     }
     this.props.updateExercise(this.props.match.params.exerciseId, currentExercise)
@@ -53,11 +53,13 @@ export default class ExerciseEditForm extends Component {
           id: exercise.id,
           userId: exercise.userId,
           exerciseName: exercise.exerciseName,
+          bodyCategoryId: Number(exercise.bodyCategoryId),
           categoryName: exercise.categoryName,
+          equipmentTypeId: Number(exercise.equipmentTypeId),
           equipmentName: exercise.equipmentName,
-          sets: exercise.sets,
-          reps: exercise.reps,
-          weightLifted: exercise.weightLifted,
+          sets: Number(exercise.sets),
+          reps: Number(exercise.reps),
+          weightLifted: Number(exercise.weightLifted),
           notes: exercise.notes
         })
       })
@@ -82,6 +84,7 @@ export default class ExerciseEditForm extends Component {
               onChange={this.handleFieldChange}
               id="exerciseName"
               value={this.state.exerciseName}
+              autoFocus=""
             />
           </div>
           {/* text and dropdown for body group: */}
@@ -180,14 +183,6 @@ export default class ExerciseEditForm extends Component {
               id="add-form-btn"
             >Update
             </button>
-            {/* clear button: */}
-            {/* <button
-              type="submit"
-              className="btn btn-primary"
-              onClick={this.clearForm}
-              id="clr-form-btn"
-            >Clear
-            </button> */}
           </div>
         </form>
       </React.Fragment>
