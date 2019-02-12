@@ -71,6 +71,7 @@ export default class UserLogin extends Component {
             required=""
           /><br />
           <button
+            type="submit"
             onClick={this.handleUserLogin}
           >Login</button>
           <Link
