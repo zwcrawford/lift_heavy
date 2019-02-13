@@ -83,12 +83,12 @@ export default class ApplicationViews extends Component {
       })
     })
   }
-  /* PASSING TO REGISTRATION.JS */
+  /* PASSING TO LOGIN & REGISTRATION.JS */
   postUser = newUser => {
     return ExerciseManager.postUser(newUser)
   }
   checkUserData(email, password) {
-    return ExerciseManager.checkUserData
+    return ExerciseManager.checkUserData(email, password)
   }
 
 
