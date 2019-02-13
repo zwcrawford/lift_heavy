@@ -21,7 +21,7 @@ export default {
   },
   // Get all exercises specific to a user
   getAllUserExercises(userId) {
-    return fetch(`${remoteURL}/users/?_embed=exercises`)
+    return fetch(`${remoteURL}/users/userId?_embed=exercises`)
     .then(e => e.json());
   },
   getAllForUser(id) {

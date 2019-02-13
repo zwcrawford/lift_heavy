@@ -32,7 +32,8 @@ export default class UserLogin extends Component {
         }
         if (loggedIn === true) {
           sessionStorage.setItem("User", evt.id)
-          this.props.getAllUserExercises(evt.id)
+          this.props.getAllUserExercises(sessionStorage.getItem("User"))
+          this.props.getAllForUser(sessionStorage.getItem(evt.id.exercises))
           this.props.history.push("/home")
         }
       })

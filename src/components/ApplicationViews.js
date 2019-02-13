@@ -90,15 +90,22 @@ export default class ApplicationViews extends Component {
   checkUserData(email, password) {
     return ExerciseManager.checkUserData(email, password)
   }
-  getAllUserExercises = (userId) => {
-    return ExerciseManager.getAllForUser(sessionStorage.getItem("User"))
+  getAllUserExercises(userId) {
+    return ExerciseManager.getAllUserExercises(userId)
     .then(userId => {
       this.setState({
         userId: userId
       })
     })
   }
-
+  getAllForUser(id) {
+    return ExerciseManager.getAllForUser(id)
+    .then(userId => {
+      this.setState({
+        id: id
+      })
+    })
+  }
 
   componentDidMount() {
     ExerciseManager.getAll().then(allExercises => {
@@ -143,6 +150,7 @@ export default class ApplicationViews extends Component {
                     handleUserLogin={this.handleUserLogin}
                       checkUserData={this.checkUserData}
                 getAllUserExercises={this.getAllUserExercises}
+                      getAllForUser={this.getAllForUser}
               />
             );
           }}
@@ -169,6 +177,7 @@ export default class ApplicationViews extends Component {
                     handleUserLogin={this.handleUserLogin}
                       checkUserData={this.checkUserData}
                 getAllUserExercises={this.getAllUserExercises}
+                      getAllForUser={this.getAllForUser}
               />
             );
           }}
@@ -197,6 +206,7 @@ export default class ApplicationViews extends Component {
                 handleUserLogin={this.handleUserLogin}
                   checkUserData={this.checkUserData}
                   getAllUserExercises={this.getAllForUser}
+                  getAllForUser={this.getAllForUser}
               />
             );
           }}
@@ -224,6 +234,7 @@ export default class ApplicationViews extends Component {
                 handleUserLogin={this.handleUserLogin}
                   checkUserData={this.checkUserData}
                   getAllUserExercises={this.getAllUserExercises}
+                  getAllForUser={this.getAllForUser}
               />
             );
           }}
@@ -251,6 +262,7 @@ export default class ApplicationViews extends Component {
                 handleUserLogin={this.handleUserLogin}
                   checkUserData={this.checkUserData}
                   getAllUserExercises={this.getAllUserExercises}
+                  getAllForUser={this.getAllForUser}
               />
               );
             }}
