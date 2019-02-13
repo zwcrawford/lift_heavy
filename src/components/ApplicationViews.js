@@ -90,6 +90,14 @@ export default class ApplicationViews extends Component {
   checkUserData(email, password) {
     return ExerciseManager.checkUserData(email, password)
   }
+  getAllUserExercises = (userId) => {
+    return ExerciseManager.getAllForUser(sessionStorage.getItem("User"))
+    .then(userId => {
+      this.setState({
+        userId: userId
+      })
+    })
+  }
 
 
   componentDidMount() {
@@ -106,6 +114,7 @@ export default class ApplicationViews extends Component {
     })
     this.getAllBodyCategories()
     this.getAllEquipmentTypes()
+    this.getAllUserExercises()
   }
   render() {
     //console.log("App View", this.state.exercises);
@@ -120,19 +129,20 @@ export default class ApplicationViews extends Component {
             return (
               <Login
                 {...props}
-                       postUser={this.postUser}
-                          users={this.state.users}
-                updateComponent={this.updateComponent}
-                 deleteExercise={this.deleteExercise}
-                    addExercise={this.addExercise}
-                 bodyCategories={this.state.bodyCategories}
-                 equipmentTypes={this.state.equipmentTypes}
-                   categoryName={this.state.categoryName}
-                 updateExercise={this.updateExercise}
-                  equipmentName={this.state.equipmentName}
-                      exercises={this.state.exercises}
-                handleUserLogin={this.handleUserLogin}
-                  checkUserData={this.checkUserData}
+                          postUser={this.postUser}
+                              users={this.state.users}
+                    updateComponent={this.updateComponent}
+                    deleteExercise={this.deleteExercise}
+                        addExercise={this.addExercise}
+                    bodyCategories={this.state.bodyCategories}
+                    equipmentTypes={this.state.equipmentTypes}
+                      categoryName={this.state.categoryName}
+                    updateExercise={this.updateExercise}
+                      equipmentName={this.state.equipmentName}
+                          exercises={this.state.exercises}
+                    handleUserLogin={this.handleUserLogin}
+                      checkUserData={this.checkUserData}
+                getAllUserExercises={this.getAllUserExercises}
               />
             );
           }}
@@ -145,19 +155,20 @@ export default class ApplicationViews extends Component {
             return (
               <Registration
                 {...props}
-                       postUser={this.postUser}
-                          users={this.state.users}
-                updateComponent={this.updateComponent}
-                 deleteExercise={this.deleteExercise}
-                    addExercise={this.addExercise}
-                 bodyCategories={this.state.bodyCategories}
-                 equipmentTypes={this.state.equipmentTypes}
-                   categoryName={this.state.categoryName}
-                 updateExercise={this.updateExercise}
-                  equipmentName={this.state.equipmentName}
-                      exercises={this.state.exercises}
-                handleUserLogin={this.handleUserLogin}
-                  checkUserData={this.checkUserData}
+                          postUser={this.postUser}
+                              users={this.state.users}
+                    updateComponent={this.updateComponent}
+                    deleteExercise={this.deleteExercise}
+                        addExercise={this.addExercise}
+                    bodyCategories={this.state.bodyCategories}
+                    equipmentTypes={this.state.equipmentTypes}
+                      categoryName={this.state.categoryName}
+                    updateExercise={this.updateExercise}
+                      equipmentName={this.state.equipmentName}
+                          exercises={this.state.exercises}
+                    handleUserLogin={this.handleUserLogin}
+                      checkUserData={this.checkUserData}
+                getAllUserExercises={this.getAllUserExercises}
               />
             );
           }}
@@ -185,6 +196,7 @@ export default class ApplicationViews extends Component {
                     getAllUsers={this.state.users}
                 handleUserLogin={this.handleUserLogin}
                   checkUserData={this.checkUserData}
+                  getAllUserExercises={this.getAllForUser}
               />
             );
           }}
@@ -211,6 +223,7 @@ export default class ApplicationViews extends Component {
                     getAllUsers={this.state.users}
                 handleUserLogin={this.handleUserLogin}
                   checkUserData={this.checkUserData}
+                  getAllUserExercises={this.getAllUserExercises}
               />
             );
           }}
@@ -237,6 +250,7 @@ export default class ApplicationViews extends Component {
                     getAllUsers={this.state.users}
                 handleUserLogin={this.handleUserLogin}
                   checkUserData={this.checkUserData}
+                  getAllUserExercises={this.getAllUserExercises}
               />
               );
             }}
