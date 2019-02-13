@@ -15,14 +15,13 @@ export default {
     .then(e => e.json());
   },
   // Get email and password to verify user
-  checkUserData(userEmailInput, userPassInput) {
-    return fetch(`${remoteURL}/users?email=${userEmailInput}&password=${userPassInput}`)
+  checkUserData(email, password) {
+    return fetch(`${remoteURL}/users?email=${email}&password=${password}`)
+    .then(e => e.json());
   },
   // Get all exercises specific to a user
   getAllUserExercises() {
-    let sessionUser = sessionStorage.getItem("email")
-    let sessionEmail = Number(sessionUser)
-    return fetch(`${remoteURL}/exercises?email=${sessionEmail}`)
+    return fetch(`${remoteURL}/users/?_embed=exercises`)
     .then(e => e.json());
   },
   // Post new user

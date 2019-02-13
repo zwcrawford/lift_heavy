@@ -24,8 +24,8 @@ export default class UserLogin extends Component {
     .then(user => {
       if (user.length === 0) {
       alert("Your email is not in our system or your password is incorrect. Please try again or register by clicking the link below.")
-    } else {
-      user.forEach( evt => {
+      } else {
+        user.forEach( evt => {
         let loggedIn = false;
         if (this.state.email === evt.email && this.state.password === evt.password) {
           loggedIn = true
@@ -35,8 +35,8 @@ export default class UserLogin extends Component {
           this.props.history.push("/home")
         }
       })
-    }
-  })
+      }
+    })
 
   }
 

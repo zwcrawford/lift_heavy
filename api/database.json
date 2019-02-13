@@ -14,6 +14,11 @@
       "email": "tre@tre.com",
       "password": "tre",
       "id": 3
+    },
+    {
+      "email": "quad@quad.com",
+      "password": "quad",
+      "id": 4
     }
   ],
   "exercises": [
