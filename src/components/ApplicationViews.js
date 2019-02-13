@@ -90,29 +90,29 @@ export default class ApplicationViews extends Component {
   checkUserData(email, password) {
     return ExerciseManager.checkUserData(email, password)
   }
-  getAllUserExercises(userId) {
-    return ExerciseManager.getAllUserExercises(userId)
-    .then(userId => {
-      this.setState({
-        userId: userId
-      })
-    })
-  }
-  getAllForUser(id) {
+  // getAllUserExercises(userId) {
+  //   return ExerciseManager.getAllUserExercises(userId)
+  //   .then(userId => {
+  //     this.setState({
+  //       userId: userId
+  //     })
+  //   })
+  // }
+  getAllForUser = (id) => {
     return ExerciseManager.getAllForUser(id)
-    .then(userId => {
+    .then(exercises => {
       this.setState({
-        id: id
+        exercises: exercises
       })
     })
   }
 
   componentDidMount() {
-    ExerciseManager.getAll().then(allExercises => {
-      this.setState({
-        exercises: allExercises
-      });
-    });
+    // ExerciseManager.getAll().then(allExercises => {
+    //   this.setState({
+    //     exercises: allExercises
+    //   });
+    // });
     ExerciseManager.getAllUsers()
     .then(users => {
       this.setState({
@@ -121,7 +121,6 @@ export default class ApplicationViews extends Component {
     })
     this.getAllBodyCategories()
     this.getAllEquipmentTypes()
-    this.getAllUserExercises()
   }
   render() {
     //console.log("App View", this.state.exercises);

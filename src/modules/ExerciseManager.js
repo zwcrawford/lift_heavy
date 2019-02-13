@@ -20,10 +20,10 @@ export default {
     .then(e => e.json());
   },
   // Get all exercises specific to a user
-  getAllUserExercises(userId) {
-    return fetch(`${remoteURL}/users/userId?_embed=exercises`)
-    .then(e => e.json());
-  },
+  // getAllUserExercises(userId) {
+  //   return fetch(`${remoteURL}/users/${userId}?_embed=exercises`)
+  //   .then(e => e.json());
+  // },
   getAllForUser(id) {
     return fetch(`${remoteURL}/exercises?userId=${id}`)
     .then(e => e.json());
