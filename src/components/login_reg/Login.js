@@ -23,21 +23,21 @@ export default class UserLogin extends Component {
     this.props.checkUserData(this.state.email, this.state.password)
     .then(user => {
       if (user.length === 0) {
-      alert("Your email is not in our system or your password is incorrect. Please try again or register by clicking the link below.")
+      alert("Your email is not in our system or your password is incorrect. Please try again or register with the link below.")
       } else {
-        user.forEach( evt => {
+        user.forEach(evt => {
         let loggedIn = false;
         if (this.state.email === evt.email && this.state.password === evt.password) {
           loggedIn = true
         }
         if (loggedIn === true) {
           sessionStorage.setItem("User", evt.id)
+          this.props.getAllForUser(sessionStorage.getItem("User"))
           this.props.history.push("/home")
         }
       })
       }
     })
-
   }
 
   render () {
