@@ -4,8 +4,7 @@ import "./Exercise.css";
 export default class ExerciseAddForm extends Component {
   // Set initial state.
   state = {
-    id: 1,
-    userId: 1,
+    id: "",
     exerciseName: "",
     categoryName: "",
     equipmentName: "",
@@ -28,7 +27,7 @@ export default class ExerciseAddForm extends Component {
   constructNewExercise = evt => {
     evt.preventDefault();
     const exercise = {
-      userId: this.state.userId,
+      userId: Number(sessionStorage.getItem("User")),
       exerciseName: this.state.exerciseName,
       bodyCategoryId: Number(this.state.bodyCategoryId),
       categoryName: this.state.categoryName,
@@ -46,7 +45,8 @@ export default class ExerciseAddForm extends Component {
 
   render() {
 
-    //console.log("Add Test", this.state);
+    console.log(Number(sessionStorage.getItem("User")));
+
     return (
       <React.Fragment>
         {/* form starts here: */}

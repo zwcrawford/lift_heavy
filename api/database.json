@@ -49,19 +49,42 @@
       "notes": "Leg day, exercise 2"
     },
     {
-      "id": 3,
-      "userId": 1,
-      "exerciseName": "Overhead Press",
-      "bodyCategoryId": 8,
+      "exerciseName": "Test",
+      "bodyCategoryId": 2,
       "categoryName": "",
-      "equipmentTypeId": 7,
+      "equipmentTypeId": 2,
       "equipmentName": "",
-      "sets": 10,
+      "sets": 8,
       "reps": 8,
-      "weightLifted": 175,
-      "notes": [
-        "Some edit text"
-      ]
+      "weightLifted": 90,
+      "notes": "Test",
+      "id": 3
+    },
+    {
+      "userId": 0,
+      "exerciseName": "Test2",
+      "bodyCategoryId": 2,
+      "categoryName": "",
+      "equipmentTypeId": 2,
+      "equipmentName": "",
+      "sets": 8,
+      "reps": 8,
+      "weightLifted": 90,
+      "notes": "Test2",
+      "id": 4
+    },
+    {
+      "userId": 3,
+      "exerciseName": "Test",
+      "bodyCategoryId": 1,
+      "categoryName": "",
+      "equipmentTypeId": 1,
+      "equipmentName": "",
+      "sets": 8,
+      "reps": 8,
+      "weightLifted": 90,
+      "notes": "Yo",
+      "id": 5
     }
   ],
   "bodyCategories": [

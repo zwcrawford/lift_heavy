@@ -53,7 +53,6 @@ export default class ApplicationViews extends Component {
     return fetch(`http://localhost:5002/exercises/${id}`, {
       method: "DELETE"
     })
-    .then(e => e.json())
     .then(() => fetch(`http://localhost:5002/exercises`))
     .then(e => e.json())
     .then(exercises => this.setState({
@@ -137,6 +136,7 @@ export default class ApplicationViews extends Component {
                 {...props}
                           postUser={this.postUser}
                               users={this.state.users}
+                              getUsers={this.getUsers}
                     updateComponent={this.updateComponent}
                     deleteExercise={this.deleteExercise}
                         addExercise={this.addExercise}
