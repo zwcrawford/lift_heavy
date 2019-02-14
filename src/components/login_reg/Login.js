@@ -6,7 +6,7 @@ export default class UserLogin extends Component {
   // Set state
   state = {
     email: "",
-    password: ""
+    password: "",
   }
 
   // Update when a field is edited
@@ -34,6 +34,8 @@ export default class UserLogin extends Component {
           sessionStorage.setItem("User", evt.id)
           this.props.getAllForUser(sessionStorage.getItem("User"))
           this.props.history.push("/home")
+          console.log(evt.id);
+          
         }
       })
       }

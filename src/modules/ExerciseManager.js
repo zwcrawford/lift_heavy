@@ -5,6 +5,9 @@ export default {
   get(id) {
     return fetch(`${remoteURL}/exercises/${id}`).then(e => e.json());
   },
+  getUsers(id) {
+    return fetch(`${remoteURL}/users/${id}`).then(e => e.json())
+  },
   // Get all exercises
   getAll() {
     return fetch(`${remoteURL}/exercises?_expand=bodyCategory&_expand=equipmentType`).then(e => e.json());

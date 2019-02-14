@@ -6,7 +6,7 @@ export default class ExerciseEditForm extends Component {
   // Setting state:
   state = {
     id: "",
-    userId: "",
+    userId: Number(sessionStorage.getItem("id")),
     exerciseName: "",
     categoryName: "",
     equipmentName: "",
@@ -63,6 +63,7 @@ export default class ExerciseEditForm extends Component {
           notes: exercise.notes
         })
       })
+      console.log("exercise.userId")
   }
 
   render() {
