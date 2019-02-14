@@ -79,14 +79,7 @@ export default class ApplicationViews extends Component {
   checkUserData(email, password) {
     return ExerciseManager.checkUserData(email, password)
   }
-  // getAllUserExercises(userId) {
-  //   return ExerciseManager.getAllUserExercises(userId)
-  //   .then(userId => {
-  //     this.setState({
-  //       userId: userId
-  //     })
-  //   })
-  // }
+
   getAllForUser = (userId) => {
     return ExerciseManager.getAllForUser(userId)
     .then(exercises => {
@@ -97,11 +90,6 @@ export default class ApplicationViews extends Component {
   }
 
   componentDidMount() {
-    // ExerciseManager.getAll().then(allExercises => {
-    //   this.setState({
-    //     exercises: allExercises
-    //   });
-    // });
     ExerciseManager.getAllUsers()
     .then(users => {
       this.setState({
@@ -115,8 +103,6 @@ export default class ApplicationViews extends Component {
   }
 
   render() {
-    //console.log("App View", this.state.exercises);
-
     return (
       <React.Fragment>
 
