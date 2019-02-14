@@ -13,18 +13,15 @@ export default class ApplicationViews extends Component {
       bodyCategories: [],
       equipmentTypes: [],
       categoryName: [],
-      equipmentName: []
+      equipmentName: [],
+      userId: Number(sessionStorage.getItem("User"))
     }
 
   /* ********** ADD EXERCISES ********** */
   addExercise = exercise =>
     ExerciseManager.post(exercise)
-    .then(() => ExerciseManager.getAll())
-    .then(exercises =>
-      this.setState({
-        exercises: exercises
-      })
-    );
+    .then(() => this.getAllForUser(Number(sessionStorage.getItem("User"))))
+
 
   /* ********** GET BODY CATEGORIES ********** */
   getAllBodyCategories() {
@@ -53,24 +50,17 @@ export default class ApplicationViews extends Component {
     return fetch(`http://localhost:5002/exercises/${id}`, {
       method: "DELETE"
     })
-    .then(() => fetch(`http://localhost:5002/exercises`))
     .then(e => e.json())
-    .then(exercises => this.setState({
-      exercises: exercises
-
-    })
+    .then(() => this.getAllForUser(Number(sessionStorage.getItem("User")))
+    //.then(e => e.json())
     )
   }
 
   /* ********** EDIT EXERCISES ********** */
   updateExercise = (exerciseId, editedExerciseObj) => {
     return ExerciseManager.put(exerciseId, editedExerciseObj)
-    .then(() => ExerciseManager.getAll())
-    .then(exercises => {
-      this.setState({
-        exercises: exercises
-      })
-    });
+    .then(() => this.getAllForUser(Number(sessionStorage.getItem("User")))
+    )
   }
 
   /* ********** USER LOGIN ********** */
@@ -97,8 +87,8 @@ export default class ApplicationViews extends Component {
   //     })
   //   })
   // }
-  getAllForUser = (id) => {
-    return ExerciseManager.getAllForUser(id)
+  getAllForUser = (userId) => {
+    return ExerciseManager.getAllForUser(userId)
     .then(exercises => {
       this.setState({
         exercises: exercises
@@ -120,7 +110,10 @@ export default class ApplicationViews extends Component {
     })
     this.getAllBodyCategories()
     this.getAllEquipmentTypes()
+    this.getAllForUser(Number(sessionStorage.getItem("User"))
+    )
   }
+
   render() {
     //console.log("App View", this.state.exercises);
 
@@ -136,7 +129,6 @@ export default class ApplicationViews extends Component {
                 {...props}
                           postUser={this.postUser}
                               users={this.state.users}
-                              getUsers={this.getUsers}
                     updateComponent={this.updateComponent}
                     deleteExercise={this.deleteExercise}
                         addExercise={this.addExercise}
