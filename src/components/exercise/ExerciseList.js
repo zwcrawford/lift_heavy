@@ -4,11 +4,6 @@ import "./Exercise.css";
 
 export default class ExerciseList extends Component {
 
-  //set initial state.
-
-
-
-
   render() {
     return (
       <React.Fragment>
