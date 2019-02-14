@@ -28,7 +28,7 @@ export default class ExerciseAddForm extends Component {
     evt.preventDefault();
     const exercise = {
       userId: Number(sessionStorage.getItem("User")),
-      exerciseName: this.state.exerciseName,
+      exerciseName: this.props.exerciseName,
       bodyCategoryId: Number(this.state.bodyCategoryId),
       categoryName: this.state.categoryName,
       equipmentTypeId: Number(this.state.equipmentTypeId),
@@ -39,13 +39,12 @@ export default class ExerciseAddForm extends Component {
       notes: this.state.notes
     };
     // Create the exercise and route the user back to the exerciseList
+    console.log(this.props.exerciseName);
     this.props.addExercise(exercise)
     .then(() => this.props.history.push("/home"));
   }
 
   render() {
-
-    console.log(Number(sessionStorage.getItem("User")));
 
     return (
       <React.Fragment>

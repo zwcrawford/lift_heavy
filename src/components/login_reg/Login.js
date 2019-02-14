@@ -35,7 +35,6 @@ export default class UserLogin extends Component {
           this.props.getAllForUser(sessionStorage.getItem("User"))
           this.props.history.push("/home")
           console.log(evt.id);
-          
         }
       })
       }

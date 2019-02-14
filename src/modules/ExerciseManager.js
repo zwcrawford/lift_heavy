@@ -22,13 +22,8 @@ export default {
     return fetch(`${remoteURL}/users?email=${email}&password=${password}`)
     .then(e => e.json());
   },
-  // Get all exercises specific to a user
-  // getAllUserExercises(userId) {
-  //   return fetch(`${remoteURL}/users/${userId}?_embed=exercises`)
-  //   .then(e => e.json());
-  // },
   getAllForUser(id) {
-    return fetch(`${remoteURL}/exercises?userId=${id}`)
+    return fetch(`${remoteURL}/exercises?userId=${id}&_expand=bodyCategory&_expand=equipmentType`)
     .then(e => e.json());
   },
   // Post new user

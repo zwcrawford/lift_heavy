@@ -23,68 +23,16 @@
   ],
   "exercises": [
     {
-      "id": 1,
       "userId": 1,
-      "exerciseName": "Squat",
-      "bodyCategoryId": 9,
+      "bodyCategoryId": 3,
       "categoryName": "",
-      "equipmentTypeId": 2,
-      "equipmentName": "",
-      "sets": 10,
-      "reps": 10,
-      "weightLifted": 200,
-      "notes": "Leg day, exercise 1"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "exerciseName": "Snatch",
-      "bodyCategoryId": 2,
-      "categoryName": "",
-      "equipmentTypeId": 2,
+      "equipmentTypeId": 3,
       "equipmentName": "",
       "sets": 8,
-      "reps": 8,
-      "weightLifted": 250,
-      "notes": "Leg day, exercise 2"
-    },
-    {
-      "exerciseName": "Test",
-      "bodyCategoryId": 2,
-      "categoryName": "",
-      "equipmentTypeId": 2,
-      "equipmentName": "",
-      "sets": 8,
-      "reps": 8,
-      "weightLifted": 90,
+      "reps": 9,
+      "weightLifted": 100,
       "notes": "Test",
-      "id": 3
-    },
-    {
-      "userId": 0,
-      "exerciseName": "Test2",
-      "bodyCategoryId": 2,
-      "categoryName": "",
-      "equipmentTypeId": 2,
-      "equipmentName": "",
-      "sets": 8,
-      "reps": 8,
-      "weightLifted": 90,
-      "notes": "Test2",
-      "id": 4
-    },
-    {
-      "userId": 3,
-      "exerciseName": "Test",
-      "bodyCategoryId": 1,
-      "categoryName": "",
-      "equipmentTypeId": 1,
-      "equipmentName": "",
-      "sets": 8,
-      "reps": 8,
-      "weightLifted": 90,
-      "notes": "Yo",
-      "id": 5
+      "id": 2
     }
   ],
   "bodyCategories": [
