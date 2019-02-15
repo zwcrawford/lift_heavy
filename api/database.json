@@ -23,40 +23,21 @@
   ],
   "exercises": [
     {
+      "id": 1,
       "userId": 1,
-      "bodyCategoryId": 3,
-      "categoryName": "",
-      "equipmentTypeId": 3,
-      "equipmentName": "",
-      "sets": 8,
-      "reps": 9,
-      "weightLifted": 100,
-      "notes": "Test",
-      "id": 2
-    },
-    {
-      "userId": 2,
-      "bodyCategoryId": 1,
-      "categoryName": "",
-      "equipmentTypeId": 1,
-      "equipmentName": "",
-      "sets": 12,
-      "reps": 12,
-      "weightLifted": 120,
-      "notes": "User2 Test",
-      "id": 3
-    },
-    {
-      "userId": 3,
+      "exerciseName": [
+        "Pull-up, no weight added"
+      ],
       "bodyCategoryId": 2,
       "categoryName": "",
-      "equipmentTypeId": 1,
+      "equipmentTypeId": 9,
       "equipmentName": "",
-      "sets": 11,
-      "reps": 11,
-      "weightLifted": 110,
-      "notes": "User3 Test",
-      "id": 4
+      "sets": 4,
+      "reps": 6,
+      "weightLifted": 185,
+      "notes": [
+        "Test - Bodyweight"
+      ]
     }
   ],
   "bodyCategories": [
