@@ -34,7 +34,7 @@ export default class Registration extends Component {
       password: this.state.password
     }
     this.props.postUser(newUser)
-    .then(() => this.props.history.push("/home"))
+    .then(() => this.props.history.push("/"))
   }
 
   render() {
@@ -74,7 +74,7 @@ export default class Registration extends Component {
             className="btn btn-primary"
             onClick={this.createNewUser}
           >Sign up</button>
-          <Link className="nav-link" onClick={this.removeSessionUser} to="/">Cancel</Link>
+          <Link className="cancel" onClick={this.removeSessionUser} to="/">Cancel</Link>
         </form>
       </React.Fragment>
     )

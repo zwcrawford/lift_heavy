@@ -21,3 +21,6 @@
 #addExerBtn {
   margin: 20px 10px;
 }
+.register, .cancel{
+  margin: 20px;
+}
