@@ -14,54 +14,21 @@
       "email": "tre@tre.com",
       "password": "tre",
       "id": 3
-    },
-    {
-      "email": "quad@quad.com",
-      "password": "quad",
-      "id": 4
     }
   ],
   "exercises": [
     {
       "userId": 2,
-      "exerciseName": "User2 Adds an Exercise",
-      "bodyCategoryId": 1,
-      "categoryName": "",
-      "equipmentTypeId": 3,
-      "equipmentName": "",
-      "sets": 10,
-      "reps": 10,
-      "weightLifted": 100,
-      "notes": "Feels good",
-      "id": 2
-    },
-    {
-      "id": 3,
-      "userId": 2,
-      "exerciseName": "User2 Test 2 Exercise",
-      "bodyCategoryId": 8,
+      "exerciseName": "Test2",
+      "bodyCategoryId": 4,
       "categoryName": "",
       "equipmentTypeId": 5,
       "equipmentName": "",
-      "sets": 12,
-      "reps": 12,
-      "weightLifted": 120,
-      "notes": "OH Press"
-    },
-    {
-      "id": 4,
-      "userId": 1,
-      "exerciseName": "User 1 Exercise 1",
-      "bodyCategoryId": 4,
-      "categoryName": "",
-      "equipmentTypeId": 7,
-      "equipmentName": "",
-      "sets": 2,
-      "reps": 10,
-      "weightLifted": 225,
-      "notes": [
-        "Calf press"
-      ]
+      "sets": 8,
+      "reps": 8,
+      "weightLifted": 80,
+      "notes": "Test2",
+      "id": 2
     }
   ],
   "bodyCategories": [
