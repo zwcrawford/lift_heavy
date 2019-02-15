@@ -28,7 +28,7 @@ export default class ExerciseAddForm extends Component {
     evt.preventDefault();
     const exercise = {
       userId: Number(sessionStorage.getItem("User")),
-      exerciseName: this.props.exerciseName,
+      exerciseName: this.state.exerciseName,
       bodyCategoryId: Number(this.state.bodyCategoryId),
       categoryName: this.state.categoryName,
       equipmentTypeId: Number(this.state.equipmentTypeId),
@@ -161,13 +161,13 @@ export default class ExerciseAddForm extends Component {
             >Save
             </button>
             {/* clear button: */}
-            <button
+            {/* <button
               type="submit"
               className="btn btn-primary"
               onClick={this.clearForm}
               id="clr-form-btn"
             >Clear
-            </button>
+            </button> */}
           </div>
         </form>
       </React.Fragment>
