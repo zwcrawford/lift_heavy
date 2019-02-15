@@ -14,14 +14,16 @@ export default class ApplicationViews extends Component {
       equipmentTypes: [],
       categoryName: [],
       equipmentName: [],
+      notes: "",
+      exerciseName: "",
       userId: Number(sessionStorage.getItem("User"))
     }
 
   /* ********** ADD EXERCISES ********** */
-  addExercise = exercise =>
-    ExerciseManager.post(exercise)
+  addExercise = exercise => {
+    return ExerciseManager.post(exercise)
     .then(() => this.getAllForUser(Number(sessionStorage.getItem("User"))))
-
+  }
 
   /* ********** GET BODY CATEGORIES ********** */
   getAllBodyCategories() {

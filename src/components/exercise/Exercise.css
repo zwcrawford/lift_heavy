@@ -3,18 +3,21 @@
   border-radius: 8px;
   width: 300px;
   padding: 10px;
-  margin: 10px;
+  margin: 8px 40px 20px;
 }
 .exerciseAddForm {
   border: 1px solid black;
   border-radius: 8px;
   width: 350px;
   padding: 10px;
-  margin: 10px;
+  margin: 20px 40px;
 }
 #add-form-btn {
   margin: 5px;
 }
 .nav-link {
   display: inline;
+}
+#addExerBtn {
+  margin: 20px 10px;
 }

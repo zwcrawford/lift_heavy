@@ -14,54 +14,150 @@
       "email": "tre@tre.com",
       "password": "tre",
       "id": 3
-    },
-    {
-      "email": "quad@quad.com",
-      "password": "quad",
-      "id": 4
     }
   ],
   "exercises": [
     {
+      "id": 2,
       "userId": 2,
-      "exerciseName": "User2 Adds an Exercise",
-      "bodyCategoryId": 1,
+      "exerciseName": [
+        "Forearm Curls"
+      ],
+      "bodyCategoryId": 6,
       "categoryName": "",
-      "equipmentTypeId": 3,
+      "equipmentTypeId": 5,
       "equipmentName": "",
-      "sets": 10,
-      "reps": 10,
-      "weightLifted": 100,
-      "notes": "Feels good",
-      "id": 2
+      "sets": 8,
+      "reps": 8,
+      "weightLifted": 80,
+      "notes": [
+        " User2 Exer1"
+      ]
     },
     {
       "id": 3,
       "userId": 2,
-      "exerciseName": "User2 Test 2 Exercise",
-      "bodyCategoryId": 8,
+      "exerciseName": [
+        "Squat"
+      ],
+      "bodyCategoryId": 9,
       "categoryName": "",
-      "equipmentTypeId": 5,
+      "equipmentTypeId": 2,
       "equipmentName": "",
-      "sets": 12,
-      "reps": 12,
-      "weightLifted": 120,
-      "notes": "OH Press"
+      "sets": 4,
+      "reps": 15,
+      "weightLifted": 180,
+      "notes": [
+        "User2 Exer2"
+      ]
     },
     {
       "id": 4,
-      "userId": 1,
-      "exerciseName": "User 1 Exercise 1",
-      "bodyCategoryId": 4,
+      "userId": 3,
+      "exerciseName": "Test User 3 - Bicep curl",
+      "bodyCategoryId": 3,
+      "categoryName": "",
+      "equipmentTypeId": 5,
+      "equipmentName": "",
+      "sets": 8,
+      "reps": 15,
+      "weightLifted": 85,
+      "notes": "Go to 90 next time"
+    },
+    {
+      "id": 5,
+      "userId": 3,
+      "exerciseName": "Test User3 Exer2 - Bench Press",
+      "bodyCategoryId": 5,
+      "categoryName": "",
+      "equipmentTypeId": 2,
+      "equipmentName": "",
+      "sets": 5,
+      "reps": 5,
+      "weightLifted": 185,
+      "notes": "Stay @ 185 one more set after"
+    },
+    {
+      "id": 6,
+      "userId": 3,
+      "exerciseName": [
+        "User3 Exer3 - Treadmill"
+      ],
+      "bodyCategoryId": 11,
       "categoryName": "",
       "equipmentTypeId": 7,
       "equipmentName": "",
-      "sets": 2,
-      "reps": 10,
-      "weightLifted": 225,
+      "sets": 1,
+      "reps": 1,
+      "weightLifted": 0,
       "notes": [
-        "Calf press"
+        "30 min / 7.7 pace / 482 cals / 4.2 miles"
       ]
+    },
+    {
+      "id": 7,
+      "userId": 3,
+      "exerciseName": "Yes Please!",
+      "bodyCategoryId": 3,
+      "categoryName": "",
+      "equipmentTypeId": 4,
+      "equipmentName": "",
+      "sets": 8,
+      "reps": 8,
+      "weightLifted": 80,
+      "notes": "Curl"
+    },
+    {
+      "userId": 1,
+      "exerciseName": "LetsGo",
+      "bodyCategoryId": 5,
+      "categoryName": "",
+      "equipmentTypeId": 7,
+      "equipmentName": "",
+      "sets": 6,
+      "reps": 9,
+      "weightLifted": 110,
+      "notes": "Flyes",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "exerciseName": "Next",
+      "bodyCategoryId": 3,
+      "categoryName": "",
+      "equipmentTypeId": 4,
+      "equipmentName": "",
+      "sets": 10,
+      "reps": 10,
+      "weightLifted": 150,
+      "notes": "Bi curls",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "exerciseName": "Deadlift",
+      "bodyCategoryId": 9,
+      "categoryName": "",
+      "equipmentTypeId": 2,
+      "equipmentName": "",
+      "sets": 8,
+      "reps": 8,
+      "weightLifted": 280,
+      "notes": "None",
+      "id": 10
+    },
+    {
+      "id": 11,
+      "userId": 2,
+      "exerciseName": "Cool wavy thing with ropes",
+      "bodyCategoryId": 11,
+      "categoryName": "",
+      "equipmentTypeId": 0,
+      "equipmentName": "",
+      "sets": 1,
+      "reps": 1,
+      "weightLifted": 0,
+      "notes": "Cycle 1 minute on, 1.5 minutes off. 12.5 minutes"
     }
   ],
   "bodyCategories": [

@@ -12,6 +12,7 @@ export default class ExerciseList extends Component {
         <div className="exerciseButton">
           <button
             type="button"
+            id="addExerBtn"
             className="btn btn-success"
             onClick={() => {
               this.props.history.push("/exercises/new");
