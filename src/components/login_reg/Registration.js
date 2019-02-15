@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-
+import { Link } from "react-router-dom"
 export default class Registration extends Component {
 
   // Set state
@@ -74,6 +74,7 @@ export default class Registration extends Component {
             className="btn btn-primary"
             onClick={this.createNewUser}
           >Sign up</button>
+          <Link className="nav-link" onClick={this.removeSessionUser} to="/">Cancel</Link>
         </form>
       </React.Fragment>
     )

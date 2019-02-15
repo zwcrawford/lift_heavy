@@ -23,20 +23,44 @@
   ],
   "exercises": [
     {
-      "id": 1,
-      "userId": 1,
-      "exerciseName": [
-        "Pull-up, no weight added"
-      ],
-      "bodyCategoryId": 2,
+      "userId": 2,
+      "exerciseName": "User2 Adds an Exercise",
+      "bodyCategoryId": 1,
       "categoryName": "",
-      "equipmentTypeId": 9,
+      "equipmentTypeId": 3,
       "equipmentName": "",
-      "sets": 4,
-      "reps": 6,
-      "weightLifted": 185,
+      "sets": 10,
+      "reps": 10,
+      "weightLifted": 100,
+      "notes": "Feels good",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "exerciseName": "User2 Test 2 Exercise",
+      "bodyCategoryId": 8,
+      "categoryName": "",
+      "equipmentTypeId": 5,
+      "equipmentName": "",
+      "sets": 12,
+      "reps": 12,
+      "weightLifted": 120,
+      "notes": "OH Press"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "exerciseName": "User 1 Exercise 1",
+      "bodyCategoryId": 4,
+      "categoryName": "",
+      "equipmentTypeId": 7,
+      "equipmentName": "",
+      "sets": 2,
+      "reps": 10,
+      "weightLifted": 225,
       "notes": [
-        "Test - Bodyweight"
+        "Calf press"
       ]
     }
   ],

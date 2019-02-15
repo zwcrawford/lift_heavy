@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import NavBar from "../nav/NavBar"
 import "./Exercise.css"
 import ExerciseManager from "../../modules/ExerciseManager";
 
@@ -69,6 +70,7 @@ export default class ExerciseEditForm extends Component {
   render() {
     return (
       <React.Fragment>
+        <NavBar />
         {/* form starts here: */}
         <form className="exerciseAddForm">
 
@@ -96,8 +98,9 @@ export default class ExerciseEditForm extends Component {
               name="bodyCategoryId"
               id="bodyCategoryId"
               onChange={this.handleFieldChange}
+              value={this.state.bodyCategoryId}
             >
-            <option defaultValue=''>Select a body group</option>
+            <option defaultValue={this.state.bodyCategoryId}>Select a body group</option>
             {this.props.bodyCategories.map(evt => (
               <option key={evt.id} value={evt.id}>
               {evt.categoryName}
@@ -113,7 +116,7 @@ export default class ExerciseEditForm extends Component {
               name="equipmentTypeId"
               id="equipmentTypeId"
               onChange={this.handleFieldChange}
-              value={this.state.equipmentName}
+              value={this.state.equipmentTypeId}
             >
             <option defaultValue="">Select equipment</option>
             {this.props.equipmentTypes.map(evt => (
