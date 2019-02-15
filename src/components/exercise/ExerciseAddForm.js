@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NavBar from "../nav/NavBar"
 import "./Exercise.css";
 
 export default class ExerciseAddForm extends Component {
@@ -48,6 +49,7 @@ export default class ExerciseAddForm extends Component {
 
     return (
       <React.Fragment>
+        <NavBar />
         {/* form starts here: */}
         <form className="exerciseAddForm">
 
