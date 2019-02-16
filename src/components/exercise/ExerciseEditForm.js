@@ -1,9 +1,21 @@
+/************************************
+* Author: Zac Crawford
+* Start Date: 02.09.19
+* Hit MVP Date: 02.15.19
+* Repository: https://github.com/zwcrawford/lift_heavy
+* Project Type: CRUD React
+*
+************************************/
+
+
 import React, { Component } from "react"
 import NavBar from "../nav/NavBar"
 import "./Exercise.css"
 import ExerciseManager from "../../modules/ExerciseManager";
 
 export default class ExerciseEditForm extends Component {
+  // State is simply the current values of the properties used to render a component.
+  // You initialize state by defining a state at the top of your class definition.
   // Setting state:
   state = {
     id: "",
