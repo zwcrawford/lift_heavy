@@ -27,8 +27,11 @@ State is simply the current values of the properties used to render a component.
 2. If you add an item to a collection in state, then it will be rendered.
 3. If you modify an object that is used in your JSX, then it will be changed when the component is re-rendered.
 */
+
+// in this project, you will see components being exported immediately, instead of after the definition.
 export default class ApplicationViews extends Component {
 
+    // Use json-server to create an API for my application.
     // Setting state:
     state = {
       users: [],
@@ -41,6 +44,9 @@ export default class ApplicationViews extends Component {
       exerciseName: "",
       userId: Number(sessionStorage.getItem("User"))
     }
+  /*
+  Some of the code below uses the fetch API in JavaScript to query my API, then serialize the response as a JSON object, then take the JSON object and set state.
+  */
 
   /* ********** ADD EXERCISES ********** */
   addExercise = exercise => {
@@ -82,6 +88,7 @@ export default class ApplicationViews extends Component {
   }
 
   /* ********** EDIT EXERCISES ********** */
+  /* I read somewhere that patch might be better if I am not re-rendering the whole object (?) */
   updateExercise = (exerciseId, editedExerciseObj) => {
     return ExerciseManager.put(exerciseId, editedExerciseObj)
     .then(() => this.getAllForUser(Number(sessionStorage.getItem("User")))
@@ -104,7 +111,6 @@ export default class ApplicationViews extends Component {
   checkUserData(email, password) {
     return ExerciseManager.checkUserData(email, password)
   }
-
   getAllForUser = (userId) => {
     return ExerciseManager.getAllForUser(userId)
     .then(exercises => {
@@ -113,7 +119,14 @@ export default class ApplicationViews extends Component {
       })
     })
   }
+  /*
+  - In React, retrieving state from a remote API works in, what seems like, a counter-intuitive way. React must first render the component to the DOM without any data, then you will request the data and re-render the component.
 
+  - One of the life-cycle methods available to every React component is componentDidMount. Straight from their docs: componentDidMount() is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here.
+
+  - If you need to load data from a remote endpoint, this is a good place to instantiate the network request. The componentDidMount() hook runs after the component output has been rendered to the DOM, so if your component needs API data, this is the place to do it.
+
+  */
   componentDidMount() {
     ExerciseManager.getAllUsers()
     .then(users => {
@@ -131,9 +144,10 @@ export default class ApplicationViews extends Component {
   Below, notice that <React.Fragment /> is simply a React wrapper.
   Notice that "exact" is needed in some routes, otherwise they would also match other routes:
 
-    "/exercises" would match "/exercises/new" and "/exercises/:exerciseId(\d+)/edit" without "exact path". The point being, I think we are querying a path that begins with "/exercises". As several routes do, which is bad, set "exact path".
+    "/exercises" would match "/exercises/new" and "/exercises/:exerciseId(\d+)/edit" without "exact path". The point being, I think we are querying a path that begins with "/exercises". As several routes do start this way, which is bad, set "exact path".
 
     "/" would match all other routes without "exact path".
+
 */
   render() {
     return (
@@ -194,10 +208,10 @@ export default class ApplicationViews extends Component {
         />
 
         {/* this is the list of exercises */}
+        {/* Here, props are being passed to ExerciseList which will then be available for ExerciseCard */}
         <Route
           exact path="/home"
           render={props => {
-            // if (this.isAuthenticated()) {
             return (
               <ExerciseList
                 {...props}
