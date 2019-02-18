@@ -1,3 +1,15 @@
+/************************************
+* Author: Zac Crawford
+* Start Date: 02.09.19
+* Hit MVP Date: 02.15.19
+* Repository: https://github.com/zwcrawford/lift_heavy
+* Project Type: CRUD React
+*
+************************************/
+
+// Login holds authentication and form elements to grant or deny access to the application.
+// This is a Presentation Component. Directly expresses HTML.
+
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 
@@ -9,7 +21,10 @@ export default class UserLogin extends Component {
     password: "",
   }
 
-  // Update when a field is edited
+  /*
+  Update when any field is edited. This is a nice way to prevent needing a function for every field.
+  Instead the two inputs on this page can simply reference this fuction with their onChange() method: onChange={this.handleFieldChange} when the user makes a change.
+  */
   handleFieldChange = evt => {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
@@ -17,7 +32,35 @@ export default class UserLogin extends Component {
     console.log(this.state)
   }
 
-  // Login handler
+  /*
+  *** Login handler *** the following three steps are going to happen when the user clicks the "Login" button (shown below) and handleUserLogin() is executed:
+
+      <button
+        type="submit"
+        className="btn btn-primary"
+        onClick={this.handleUserLogin}
+        >Login</button>
+
+    1. The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+    For example, this can be useful when:
+      - Clicking on a "Submit" button, prevent it from submitting a form
+      - Clicking on a link, prevent the link from following the URL
+        * Note: Not all events are cancelable. Use the cancelable property to find out if an event is cancelable.
+        * Note: The preventDefault() method does not prevent further propagation of an event through the DOM.                       Use the stopPropagation() method to handle this.
+
+        * MyNote [ZC - I need to learn about propagation and how to find out if an event is cancelable"]
+
+    2. A collection is being passed down from ApplicationViews and is available to its child, Login, via props. Here, the handleUserLogin() method is using that collection to check the database against the email and password entered by the user (see below)
+
+    checkUserData(email, password) {
+    return fetch(`${remoteURL}/users?email=${email}&password=${password}`)
+    .then(e => e.json());
+
+    3. (a) ***CONDITIONAL [* IF *] the user's data does not retrieve a match in the JSON database, pop up an error message for the user saying that data is not valid and to try again or register.
+
+    3. (b) For everyone that does have a match in the users table, they (forEach) are logged in, their sessionStorage is set, and they are diverted to the "home" screen, which for this project is the ExerciseList component. There they can add exercise cards, see the cards listed out, and edit or delete the cards individually. A user may also logout which removes their session Storage credentials and returns the user to the login screen.
+
+  */
   handleUserLogin = evt => {
     evt.preventDefault()
     this.props.checkUserData(this.state.email, this.state.password)
@@ -40,6 +83,10 @@ export default class UserLogin extends Component {
     })
   }
 
+  /*
+    *** RENDER ***
+    This login screen is fairly simple and includes a heading, subheading, 2 labels tied to two inputs, and finally a login button and a register link. There's a thin black line border with curved edges around all other elements.
+  */
   render () {
     return (
       <React.Fragment>
