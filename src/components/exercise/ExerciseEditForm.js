@@ -7,6 +7,8 @@
 *
 ************************************/
 
+// ExerciseEditForm holds the form that always displays when a user clicks the edit link from the ExerciseCard.
+// This is a Presentation Component. Directly expresses HTML.
 
 import React, { Component } from "react"
 import NavBar from "../nav/NavBar"
@@ -14,9 +16,15 @@ import "./Exercise.css"
 import ExerciseManager from "../../modules/ExerciseManager";
 
 export default class ExerciseEditForm extends Component {
-  // State is simply the current values of the properties used to render a component.
-  // You initialize state by defining a state at the top of your class definition.
-  // Setting state:
+  /*
+  State is simply the current values of the properties used to render a component.
+
+  I am initializing state by defining a state at the top of my class definition for all data that the application will need.
+
+  Here I am starting with mainly empty strings to set state. I want to ensure that what the user inputs later will
+  be set as state.
+  Setting state for this project:
+  */
   state = {
     id: "",
     userId: Number(sessionStorage.getItem("User")),
@@ -30,7 +38,8 @@ export default class ExerciseEditForm extends Component {
     weightLifted: "",
     notes: ""
   }
-  // Makes sense to place the update function before the handleFieldChange
+  // Makes sense to me that the update function should be before the handleFieldChange
+  // This is executed when the user clicks the "Update" button.
   updateCurrentExercise = evt => {
     evt.preventDefault();
     const currentExercise = {
@@ -60,6 +69,8 @@ export default class ExerciseEditForm extends Component {
   }
 
   componentDidMount() {
+    // Get the exerciseId that matches the one from the database (after being updated via updateCurrentExercise)
+    // Then use it to set state for each key:value in the exercise object.
     ExerciseManager.get(this.props.match.params.exerciseId)
       .then(exercise => {
         this.setState({

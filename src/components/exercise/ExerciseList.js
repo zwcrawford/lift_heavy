@@ -10,8 +10,7 @@
 // ExerciseList is where the ExerciseCards will display after an exercise is created
 // This is a Presentation Component. It directly expresses HTML.
 
-// 1. Aside from setting up the db, this was my starting point, the first page I had loading on the DOM.
-
+// Aside from setting up the db, this was my starting point, the first page I had loading on the DOM.
 
 import React, { Component } from "react"
 import NavBar from "../nav/NavBar"
@@ -51,7 +50,11 @@ export default class ExerciseList extends Component {
 
         {/* JSX interprets "ExerciseCard" as a component and will render the class defined in its own file - ExerciseCard.js */}
         {/* There are 2 starter exercise objects in the exercises array so the map() array method can convert the raw data into HTML elements. */}
-        {/* The map() method creates a new array with the results of calling a provided function on every element in the calling array. */}
+        {/*
+        The map() method creates a new array with the results of calling a provided function on every element in the calling array. Here I am taking the exercises array and mapping each exercise to return a specific ExerciseCard.
+        I am including all exercises here, but the Login component ensures that only the exercises created by that user
+        are shown.
+        */}
           {this.props.exercises.map(exercise => (
             <ExerciseCard key={exercise.id} exercise={exercise} {...this.props}
             />

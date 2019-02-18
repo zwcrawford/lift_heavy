@@ -6,6 +6,10 @@
 * Project Type: CRUD React
 *
 ************************************/
+
+// ExerciseCard holds exercise elements to be displayed based on the user who is logged in.
+// This is a Presentation Component. Directly expresses HTML.
+
 import React, { Component } from "react";
 import { Link } from "react-router-dom"
 import "./Exercise.css";
@@ -26,6 +30,18 @@ import "./Exercise.css";
 */
 
 export default class ExerciseCard extends Component {
+
+  /*
+    *** RENDER ***
+    - This is the output to the DOM on the ExerciseList. Each exercise is defined and contained within a card.
+    - One method for conditionally rendering elements inline is to use the JavaScript conditional operator:
+
+      condition ? true : false
+
+      This was used for my two dropdown menus.
+
+    - From either ExerciseAddForm or ExerciseEditForm, props are passed to the ExerciseCard to display.
+  */
   render() {
     // console here
     //console.log("Test", this.props);

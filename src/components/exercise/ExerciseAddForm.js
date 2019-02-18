@@ -7,6 +7,9 @@
 *
 ************************************/
 
+// - ExerciseAddForm holds the form to add exercises to the database and subsequently, the ExerciseList where each exercise is represented on the DOM as a simple card.
+// - This is a Presentation Component. Directly expresses HTML.
+
 import React, { Component } from "react";
 import NavBar from "../nav/NavBar"
 import "./Exercise.css";
@@ -54,6 +57,16 @@ export default class ExerciseAddForm extends Component {
     .then(() => this.props.history.push("/home"));
   }
 
+  /*
+    *** RENDER ***
+    This was the first significant form I made to collect user data. Only the ExerciseList and ExerciseCard came first which are strictly focused on output. In an attempt to find a cheap and easy way to stick in some form validation, most of my inputs have "required" as an attribute though I am not sure how well that is working...?
+
+    I planned to style this project in a basic but professional way but I had to add some even more basic styling upfront for my own sanity when testing. In my opinion, having these minimal styling options helps me be more productive.
+
+    Takeaways here are that dropdown lists are not to be taken lightly. They were the most challenging part of this project for me.
+    Both in terms of getting them to display properly and in reading and displaying the user's selection.
+
+  */
   render() {
 
     return (
@@ -87,8 +100,13 @@ export default class ExerciseAddForm extends Component {
               name="bodyCategoryId"
               id="bodyCategoryId"
               onChange={this.handleFieldChange}
-            >
+              >
+            {/* Display a default selection: */}
             <option defaultValue="">Select body group</option>
+            {/* The map() method creates a new array with the results of calling a provided function on every element
+            in the calling array. */}
+
+            {/* Map the bodyCategories to a new array, set the key and value for each option, and display the name for each option in the dropdown for the user to select */}
             {this.props.bodyCategories.map(evt => (
               <option key={evt.id} value={evt.id}>
               {evt.categoryName}
@@ -163,7 +181,10 @@ export default class ExerciseAddForm extends Component {
             />
           </div>
           <div>
-            {/* submit button: */}
+            {/*
+            Create the exercise via constructNewExercise which will redirect user back to ExerciseList
+            submit button:
+            */}
             <button
               type="submit"
               className="btn btn-primary"
@@ -171,6 +192,7 @@ export default class ExerciseAddForm extends Component {
               id="add-form-btn"
             >Save
             </button>
+            {/* << implementing later >> */}
             {/* clear button: */}
             {/* <button
               type="submit"
