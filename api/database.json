@@ -19,6 +19,11 @@
       "email": "quad@quad.com",
       "password": "quad",
       "id": 4
+    },
+    {
+      "email": "you@you.com",
+      "password": "you",
+      "id": 5
     }
   ],
   "exercises": [
@@ -43,7 +48,7 @@
       "id": 3,
       "userId": 2,
       "exerciseName": [
-        "Squat"
+        "Squat2"
       ],
       "bodyCategoryId": 9,
       "categoryName": "",
@@ -100,19 +105,6 @@
       ]
     },
     {
-      "id": 7,
-      "userId": 3,
-      "exerciseName": "Yes Please!",
-      "bodyCategoryId": 3,
-      "categoryName": "",
-      "equipmentTypeId": 4,
-      "equipmentName": "",
-      "sets": 8,
-      "reps": 8,
-      "weightLifted": 80,
-      "notes": "Curl"
-    },
-    {
       "id": 8,
       "userId": 1,
       "exerciseName": [
@@ -154,6 +146,19 @@
       "weightLifted": 80,
       "notes": "sure",
       "id": 11
+    },
+    {
+      "userId": 2,
+      "exerciseName": "Benchpress",
+      "bodyCategoryId": 5,
+      "categoryName": "",
+      "equipmentTypeId": 2,
+      "equipmentName": "",
+      "sets": 8,
+      "reps": 8,
+      "weightLifted": 250,
+      "notes": "Good lift!",
+      "id": 12
     }
   ],
   "bodyCategories": [

@@ -13,6 +13,7 @@ import React, { Component } from "react"
 import ApplicationViews from "./ApplicationViews"
 import "./Lift.css"
 import "bootstrap/dist/css/bootstrap.min.css"
+import logo from '../images/logo.jpg'
 
 // Here we are defining the components that will get rendered by the Lift component: ApplicationViews.js.
 
@@ -20,6 +21,7 @@ export default class Lift extends Component {
   render() {
     return (
       <React.Fragment>
+        <img src={logo} alt="lifter logo" />
         <ApplicationViews />
       </React.Fragment>
     );
