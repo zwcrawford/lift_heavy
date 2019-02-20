@@ -27,7 +27,7 @@
   margin: 5px;
   background-color: #E54458;
   border: 1px solid black;
-  color: #C5C3C6;
+  color: #ffffff;
 }
 .nav-link {
   display: inline;
@@ -37,7 +37,7 @@
 #addExerBtn {
   margin: 20px 10px;
   background-color:#E54458;
-  color: #C5C3C6;
+  color: #ffffff;
   border: 1px solid black;
   transition: all 0.5s;
   cursor: pointer;

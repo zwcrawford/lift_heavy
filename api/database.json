@@ -54,7 +54,9 @@
     {
       "id": 4,
       "userId": 3,
-      "exerciseName": "Test User 3 - Bicep curl",
+      "exerciseName": [
+        "Bicep curl"
+      ],
       "bodyCategoryId": 3,
       "categoryName": "",
       "equipmentTypeId": 5,
@@ -67,7 +69,9 @@
     {
       "id": 5,
       "userId": 3,
-      "exerciseName": "Test User3 Exer2 - Bench Press",
+      "exerciseName": [
+        "Bench Press"
+      ],
       "bodyCategoryId": 5,
       "categoryName": "",
       "equipmentTypeId": 2,
@@ -81,7 +85,7 @@
       "id": 6,
       "userId": 3,
       "exerciseName": [
-        "User3 Exer3 - Treadmill"
+        "Treadmill"
       ],
       "bodyCategoryId": 11,
       "categoryName": "",

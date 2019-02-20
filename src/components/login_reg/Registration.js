@@ -102,6 +102,7 @@ export default class Registration extends Component {
           <button
             type="submit"
             className="btn btn-primary"
+            id="add-form-btn"
             onClick={this.createNewUser}
           >Sign up</button>
           {/* If they decide not to sign up and hit cancel, they are brought back to login screen. */}

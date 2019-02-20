@@ -122,6 +122,7 @@ export default class UserLogin extends Component {
           <button
             type="submit"
             className="btn btn-primary"
+            id="add-form-btn"
             onClick={this.handleUserLogin}
           >Login</button>
           <Link
