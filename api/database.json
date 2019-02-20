@@ -14,16 +14,6 @@
       "email": "tre@tre.com",
       "password": "tre",
       "id": 3
-    },
-    {
-      "email": "quad@quad.com",
-      "password": "quad",
-      "id": 4
-    },
-    {
-      "email": "you@you.com",
-      "password": "you",
-      "id": 5
     }
   ],
   "exercises": [
@@ -105,23 +95,7 @@
       ]
     },
     {
-      "id": 8,
-      "userId": 1,
-      "exerciseName": [
-        "Hanging Crunch"
-      ],
-      "bodyCategoryId": 3,
-      "categoryName": "",
-      "equipmentTypeId": 4,
-      "equipmentName": "",
-      "sets": 6,
-      "reps": 12,
-      "weightLifted": 245,
-      "notes": [
-        "More arm day"
-      ]
-    },
-    {
+      "id": 10,
       "userId": 1,
       "exerciseName": "Deadlift",
       "bodyCategoryId": 9,
@@ -131,8 +105,7 @@
       "sets": 8,
       "reps": 8,
       "weightLifted": 280,
-      "notes": "None",
-      "id": 10
+      "notes": "None"
     },
     {
       "userId": 1,
@@ -159,6 +132,21 @@
       "weightLifted": 250,
       "notes": "Good lift!",
       "id": 12
+    },
+    {
+      "id": 13,
+      "userId": 1,
+      "exerciseName": "Preacher Curls",
+      "bodyCategoryId": 3,
+      "categoryName": "",
+      "equipmentTypeId": 5,
+      "equipmentName": "",
+      "sets": 10,
+      "reps": 8,
+      "weightLifted": 80,
+      "notes": [
+        "Left elbow tight 2"
+      ]
     }
   ],
   "bodyCategories": [

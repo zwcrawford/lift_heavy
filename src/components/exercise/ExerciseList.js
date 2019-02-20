@@ -42,7 +42,7 @@ export default class ExerciseList extends Component {
             onClick={() => {
               this.props.history.push("/exercises/new");
             }}
-          >Add Exercise
+          ><span>Add Exercise</span>
           </button>
         </div>
         {/* This is the area for displaying the exercise cards on DOM under button. */}

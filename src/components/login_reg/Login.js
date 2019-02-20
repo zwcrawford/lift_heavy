@@ -23,7 +23,7 @@ export default class UserLogin extends Component {
 
   /*
   Update when any field is edited. This is a nice way to prevent needing a function for every field.
-  Instead the two inputs on this page can simply reference this fuction with their onChange() method: onChange={this.handleFieldChange} when the user makes a change.
+  Instead the two inputs on this page can simply reference this function with their onChange() method: onChange={this.handleFieldChange} when the user makes a change.
   */
   handleFieldChange = evt => {
     const stateToChange = {};

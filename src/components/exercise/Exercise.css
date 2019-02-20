@@ -6,8 +6,12 @@
   width:70%;
   margin-left:auto;
   margin-right:auto;
+  background-color: #C5C3C6
 }
-
+.card-title {
+  color: #E71D36;
+  text-align: center;
+}
 .exerciseAddForm {
   border: 1px solid black;
   border-radius: 8px;
@@ -17,16 +21,76 @@
   margin-left:auto;
   margin-right:auto;
   justify-content: center;
+  background-color: #C5C3C6
 }
 #add-form-btn {
   margin: 5px;
+  background-color: #E54458;
+  border: 1px solid black;
+  color: #C5C3C6;
 }
 .nav-link {
   display: inline;
+  font-weight: bold;
+  color: #1985A1;
 }
 #addExerBtn {
   margin: 20px 10px;
+  background-color:#E54458;
+  color: #C5C3C6;
+  border: 1px solid black;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#addExerBtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+#addExerBtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+#addExerBtn:hover span {
+  padding-right: 25px;
+  background-color:#E54458;
+}
+
+#addExerBtn:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 .register, .cancel{
   margin: 20px;
+}
+.links {
+  text-align: right;
+  color: #1985A1;
+}
+.card-label {
+ margin-right: 1em;
+ text-align: right;
+ display: inline;
+}
+.btn {
+  background-color: #1985A1;
+}
+.underlay {
+  z-index: -1;
+}
+.overlay{
+  z-index: 1;
+  width: 20%;
+  height: auto;
+  margin-left:auto;
+  margin-right:auto;
+  display: block;
+  position: relative;
+  top: -150px;
+  margin-top: -50px;
 }
