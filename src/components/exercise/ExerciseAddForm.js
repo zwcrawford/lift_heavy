@@ -11,6 +11,7 @@
 // - This is a Presentation Component. Directly expresses HTML.
 
 import React, { Component } from "react";
+import { Link } from "react-router-dom"
 import NavBar from "../nav/NavBar"
 import "./Exercise.css";
 
@@ -171,7 +172,7 @@ export default class ExerciseAddForm extends Component {
           {/* text and input for notes: */}
           <div className="form-group">
             <label htmlFor="notes">Notes:</label>
-            <input
+            <textarea
               type="textarea"
               required
               className="form-control"
@@ -201,6 +202,10 @@ export default class ExerciseAddForm extends Component {
               id="clr-form-btn"
             >Clear
             </button> */}
+            <Link
+            className="nav-link"
+            to={`/home`}
+          >Back</Link>
           </div>
         </form>
       </React.Fragment>

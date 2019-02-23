@@ -1,16 +1,29 @@
 .card-body {
   border: 1px solid black;
+  justify-content: flex-start;
   border-radius: 8px;
   padding: 10px;
-  margin: 8px 40px 20px;
+  margin: 10px;
   width:70%;
   margin-left:auto;
   margin-right:auto;
-  background-color: #C5C3C6
+  background-color: #E0E0E1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: .9em;
+}
+.card-label {
+  width: 25%;
+  font-weight: 600;
+  margin-right: 10px;
+  text-align: right;
+}
+.card-output {
+  width: 60%;
 }
 .card-title {
-  color: #E71D36;
-  text-align: center;
+  font-weight: 800;
 }
 .exerciseAddForm {
   border: 1px solid black;
@@ -18,25 +31,32 @@
   width: 350px;
   padding: 10px;
   margin: 20px 40px;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
-  background-color: #C5C3C6
+  background-color: #E0E0E1;
 }
 #add-form-btn {
   margin: 5px;
-  background-color: #E54458;
+  background-color: #e01f35;
   border: 1px solid black;
-  color: #ffffff;
+  color:#ffffff;
 }
 .nav-link {
+  font-weight: bold;
+  color: #1985A1;
   display: inline;
+}
+.nav {
+  margin: 10px;
+}
+.card-link {
   font-weight: bold;
   color: #1985A1;
 }
 #addExerBtn {
-  margin: 20px 10px;
-  background-color:#E54458;
+  margin: 20px 20px;
+  background-color:#e01f35;
   color: #ffffff;
   border: 1px solid black;
   transition: all 0.5s;
@@ -53,39 +73,34 @@
   position: absolute;
   opacity: 0;
   top: 0;
-  right: -20px;
+  right: 0;
   transition: 0.5s;
 }
 #addExerBtn:hover span {
   padding-right: 25px;
-  background-color:#E54458;
 }
 
 #addExerBtn:hover span:after {
   opacity: 1;
   right: 0;
 }
-.register, .cancel{
+.register, .cancel {
   margin: 20px;
 }
 .links {
-  text-align: right;
   color: #1985A1;
 }
-.card-label {
- margin-right: 1em;
- text-align: right;
- display: inline;
-}
-.btn {
-  background-color: #1985A1;
+
+.btn, .back {
+  font-weight: bold;
+  color: #1985A1;
 }
 .underlay {
   z-index: -1;
 }
-.overlay{
+.overlay {
   z-index: 1;
-  width: 20%;
+  width: 25%;
   height: auto;
   margin-left:auto;
   margin-right:auto;
@@ -93,4 +108,15 @@
   position: relative;
   top: -150px;
   margin-top: -50px;
+}
+#notes {
+  border: 1px solid black;
+  resize: vertical;
+  overflow: auto;
+  min-height: 40px;
+  max-height: 350px;
+}
+#equipmentTypeId,
+#bodyCategoryId {
+  height: 30px;
 }

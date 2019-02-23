@@ -64,7 +64,9 @@
       "sets": 8,
       "reps": 15,
       "weightLifted": 85,
-      "notes": "Go to 90 next time"
+      "notes": [
+        "Go to 90 next time. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      ]
     },
     {
       "id": 5,
@@ -80,23 +82,6 @@
       "reps": 5,
       "weightLifted": 185,
       "notes": "Stay @ 185 one more set after"
-    },
-    {
-      "id": 6,
-      "userId": 3,
-      "exerciseName": [
-        "Treadmill"
-      ],
-      "bodyCategoryId": 11,
-      "categoryName": "",
-      "equipmentTypeId": 7,
-      "equipmentName": "",
-      "sets": 1,
-      "reps": 1,
-      "weightLifted": 0,
-      "notes": [
-        "30 min / 7.7 pace / 482 cals / 4.2 miles"
-      ]
     },
     {
       "id": 10,
@@ -151,6 +136,19 @@
       "notes": [
         "Left elbow tight 2"
       ]
+    },
+    {
+      "id": 14,
+      "userId": 3,
+      "exerciseName": "Lat Pulldown",
+      "bodyCategoryId": 2,
+      "categoryName": "",
+      "equipmentTypeId": 7,
+      "equipmentName": "",
+      "sets": 8,
+      "reps": 8,
+      "weightLifted": 160,
+      "notes": "Extend reps next time"
     }
   ],
   "bodyCategories": [

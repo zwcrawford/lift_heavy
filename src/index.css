@@ -1,8 +1,7 @@
 body {
 
   border: 1px solid black;
-  width: 500px;
-  width:40%;
+  width:55%;
   background-color: #46494C;
   margin-left:auto;
   margin-right:auto;
@@ -19,7 +18,11 @@ code {
 img {
   width: 100%;
   height: 250px;
+  border-collapse: separate;
 }
 html {
-  background-color: #9D9C9C;
+  background-color: #E0E0E1;
+}
+.navbar{
+  margin-top: -20px;
 }

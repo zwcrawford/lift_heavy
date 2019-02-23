@@ -50,38 +50,61 @@ export default class ExerciseCard extends Component {
       <React.Fragment>
         <div key={this.props.exercise.id} className="exerciseCard">
           <div className="card-body">
-            <h5 className="card-title">
-              Exercise: {this.props.exercise.exerciseName}
-            </h5>
-            <label className="card-label">
-              Body Group: {this.props.exercise.bodyCategory ? this.props.exercise.bodyCategory.categoryName : ""}
+            <label className="card-label card-title">
+              Exercise:
+            </label>
+            <label className="card-output card-title">
+              {this.props.exercise.exerciseName}
             </label>
             <br />
             <label className="card-label">
-              Equipment: {this.props.exercise.equipmentType ? this.props.exercise.equipmentType.equipmentName : ""}
+              Body Group:
+            </label>
+            <label className="card-output">
+              {this.props.exercise.bodyCategory ? this.props.exercise.bodyCategory.categoryName : ""}
             </label>
             <br />
             <label className="card-label">
-              # of Sets: {this.props.exercise.sets}
+              Equipment:
+            </label>
+            <label className="card-output">
+              {this.props.exercise.equipmentType ? this.props.exercise.equipmentType.equipmentName : ""}
             </label>
             <br />
             <label className="card-label">
-              # of Reps: {this.props.exercise.reps}
+              # of Sets:
+            </label>
+            <label className="card-output">
+              {this.props.exercise.sets}
             </label>
             <br />
             <label className="card-label">
-              Weigh / Set: {this.props.exercise.weightLifted}
+              # of Reps:
+            </label>
+            <label className="card-output">
+              {this.props.exercise.reps}
             </label>
             <br />
             <label className="card-label">
-              Notes: {this.props.exercise.notes}
+              Weigh / Rep:
             </label>
-            <div className="links">
-              {/* The <Link/> component from the React Router package installed has an attribute named "to". It will render a hyperlink in your DOM, and when clicked, it will change the URL in the browser to the value of the to attribute. */}
-              <Link className="nav-link" to={`/exercises/${this.props.exercise.id}/edit`}>Edit</Link>
-              <Link className="nav-link" to={`/home`} onClick={() => {this.props.deleteExercise(this.props.exercise.id)}}>Delete</Link>
+            <label className="card-output">
+              {this.props.exercise.weightLifted}
+            </label>
+            <br />
+            <label className="card-label">
+              Notes:
+            </label>
+            <label className="card-output">
+              {this.props.exercise.notes}
+            </label>
+            {/* The <Link/> component from the React Router package installed has an attribute named "to". It will render a hyperlink in your DOM, and when clicked, it will change the URL in the browser to the value of the to attribute. */}
+            <div className="card-links">
+                <Link className="card-link" to={`/exercises/${this.props.exercise.id}/edit`}>Edit</Link>
+                <Link className="card-link" to={`/home`} onClick={() => {this.props.deleteExercise(this.props.exercise.id)}}>Delete</Link>
             </div>
           </div>
+
         </div>
       </React.Fragment>
     );
