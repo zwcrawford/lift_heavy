@@ -14,16 +14,6 @@
       "email": "tre@tre.com",
       "password": "tre",
       "id": 3
-    },
-    {
-      "email": "quad@quad.com",
-      "password": "quad",
-      "id": 4
-    },
-    {
-      "email": "you@you.com",
-      "password": "you",
-      "id": 5
     }
   ],
   "exercises": [
@@ -64,7 +54,9 @@
     {
       "id": 4,
       "userId": 3,
-      "exerciseName": "Test User 3 - Bicep curl",
+      "exerciseName": [
+        "Bicep curl"
+      ],
       "bodyCategoryId": 3,
       "categoryName": "",
       "equipmentTypeId": 5,
@@ -72,12 +64,16 @@
       "sets": 8,
       "reps": 15,
       "weightLifted": 85,
-      "notes": "Go to 90 next time"
+      "notes": [
+        "Go to 90 next time. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus. Sem viverra aliquet eget sit amet. Et ultrices neque ornare aenean euismod. Ipsum suspendisse ultrices gravida dictum fusce. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Egestas purus viverra accumsan in nisl. Vitae turpis massa sed elementum tempus egestas sed. Turpis massa tincidunt dui ut ornare. Sem et tortor consequat id porta nibh venenatis cras sed."
+      ]
     },
     {
       "id": 5,
       "userId": 3,
-      "exerciseName": "Test User3 Exer2 - Bench Press",
+      "exerciseName": [
+        "Bench Press"
+      ],
       "bodyCategoryId": 5,
       "categoryName": "",
       "equipmentTypeId": 2,
@@ -88,40 +84,7 @@
       "notes": "Stay @ 185 one more set after"
     },
     {
-      "id": 6,
-      "userId": 3,
-      "exerciseName": [
-        "User3 Exer3 - Treadmill"
-      ],
-      "bodyCategoryId": 11,
-      "categoryName": "",
-      "equipmentTypeId": 7,
-      "equipmentName": "",
-      "sets": 1,
-      "reps": 1,
-      "weightLifted": 0,
-      "notes": [
-        "30 min / 7.7 pace / 482 cals / 4.2 miles"
-      ]
-    },
-    {
-      "id": 8,
-      "userId": 1,
-      "exerciseName": [
-        "Hanging Crunch"
-      ],
-      "bodyCategoryId": 3,
-      "categoryName": "",
-      "equipmentTypeId": 4,
-      "equipmentName": "",
-      "sets": 6,
-      "reps": 12,
-      "weightLifted": 245,
-      "notes": [
-        "More arm day"
-      ]
-    },
-    {
+      "id": 10,
       "userId": 1,
       "exerciseName": "Deadlift",
       "bodyCategoryId": 9,
@@ -131,8 +94,9 @@
       "sets": 8,
       "reps": 8,
       "weightLifted": 280,
-      "notes": "None",
-      "id": 10
+      "notes": [
+        "This was fun"
+      ]
     },
     {
       "userId": 1,
@@ -148,17 +112,32 @@
       "id": 11
     },
     {
-      "userId": 2,
-      "exerciseName": "Benchpress",
-      "bodyCategoryId": 5,
+      "id": 13,
+      "userId": 1,
+      "exerciseName": "Preacher Curls",
+      "bodyCategoryId": 3,
       "categoryName": "",
-      "equipmentTypeId": 2,
+      "equipmentTypeId": 5,
+      "equipmentName": "",
+      "sets": 9,
+      "reps": 8,
+      "weightLifted": 80,
+      "notes": [
+        "Left elbow feeling strained after 9 sets. Took a break to prevent injury."
+      ]
+    },
+    {
+      "id": 14,
+      "userId": 3,
+      "exerciseName": "Lat Pulldown",
+      "bodyCategoryId": 2,
+      "categoryName": "",
+      "equipmentTypeId": 7,
       "equipmentName": "",
       "sets": 8,
       "reps": 8,
-      "weightLifted": 250,
-      "notes": "Good lift!",
-      "id": 12
+      "weightLifted": 160,
+      "notes": "Extend reps next time"
     }
   ],
   "bodyCategories": [

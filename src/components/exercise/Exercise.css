@@ -1,32 +1,126 @@
 .card-body {
   border: 1px solid black;
+  justify-content: flex-start;
   border-radius: 8px;
-  padding: 10px;
-  margin: 8px 40px 20px;
+  margin: 10px;
   width:70%;
+  min-width: 50%;
   margin-left:auto;
   margin-right:auto;
+  background-color: #F2F2F2 ;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: .9em;
 }
-
+.card-label {
+  width: 25%;
+  font-weight: 600;
+  margin-right: 10px;
+  text-align: right;
+}
+.card-output {
+  width: 60%;
+}
+.card-title {
+  font-weight: 800;
+}
 .exerciseAddForm {
   border: 1px solid black;
   border-radius: 8px;
   width: 350px;
   padding: 10px;
   margin: 20px 40px;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
+  background-color: #E0E0E1;
 }
 #add-form-btn {
   margin: 5px;
+  background-color: #e01f35;
+  border: 1px solid black;
+  color:#ffffff;
 }
 .nav-link {
+  font-weight: bold;
+  color: #1985A1;
   display: inline;
 }
-#addExerBtn {
-  margin: 20px 10px;
+.nav {
+  margin: 10px;
 }
-.register, .cancel{
+.card-link {
+  font-weight: bold;
+  color: #1985A1;
+}
+.card-links {
+  margin-left: 80%;
+
+}
+#addExerBtn {
+  margin: 20px 20px;
+  background-color:#e01f35;
+  color: #ffffff;
+  border: 1px solid black;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#addExerBtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+#addExerBtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  transition: 0.5s;
+}
+#addExerBtn:hover span {
+  padding-right: 25px;
+}
+
+#addExerBtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.register, .cancel {
   margin: 20px;
+}
+.links {
+  color: #1985A1;
+}
+
+.btn, .back {
+  font-weight: bold;
+  color: #1985A1;
+}
+.underlay {
+  z-index: -1;
+}
+.overlay {
+  z-index: 1;
+  width: 25%;
+  height: auto;
+  margin-left:auto;
+  margin-right:auto;
+  display: block;
+  position: relative;
+  top: -150px;
+  margin-top: -70px;
+}
+#notes {
+  border: 1px solid black;
+  resize: vertical;
+  overflow: auto;
+  min-height: 40px;
+  max-height: 350px;
+}
+#equipmentTypeId,
+#bodyCategoryId {
+  height: 30px;
 }

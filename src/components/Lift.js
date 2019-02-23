@@ -14,6 +14,7 @@ import ApplicationViews from "./ApplicationViews"
 import "./Lift.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import logo from '../images/logo.jpg'
+import Lift_Heavy_logo from '../images/Lift_Heavy_logo.jpg'
 
 // Here we are defining the components that will get rendered by the Lift component: ApplicationViews.js.
 
@@ -21,7 +22,8 @@ export default class Lift extends Component {
   render() {
     return (
       <React.Fragment>
-        <img src={logo} alt="lifter logo" />
+        <img src={logo} alt="lifter logo" className="underlay"/>
+        <img src={Lift_Heavy_logo} alt="lifter logo" className="overlay"/>
         <ApplicationViews />
       </React.Fragment>
     );
