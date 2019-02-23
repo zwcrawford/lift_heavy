@@ -65,7 +65,7 @@
       "reps": 15,
       "weightLifted": 85,
       "notes": [
-        "Go to 90 next time. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "Go to 90 next time. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus. Sem viverra aliquet eget sit amet. Et ultrices neque ornare aenean euismod. Ipsum suspendisse ultrices gravida dictum fusce. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Egestas purus viverra accumsan in nisl. Vitae turpis massa sed elementum tempus egestas sed. Turpis massa tincidunt dui ut ornare. Sem et tortor consequat id porta nibh venenatis cras sed."
       ]
     },
     {
@@ -94,7 +94,9 @@
       "sets": 8,
       "reps": 8,
       "weightLifted": 280,
-      "notes": "None"
+      "notes": [
+        "This was fun"
+      ]
     },
     {
       "userId": 1,
@@ -110,19 +112,6 @@
       "id": 11
     },
     {
-      "userId": 2,
-      "exerciseName": "Benchpress",
-      "bodyCategoryId": 5,
-      "categoryName": "",
-      "equipmentTypeId": 2,
-      "equipmentName": "",
-      "sets": 8,
-      "reps": 8,
-      "weightLifted": 250,
-      "notes": "Good lift!",
-      "id": 12
-    },
-    {
       "id": 13,
       "userId": 1,
       "exerciseName": "Preacher Curls",
@@ -130,11 +119,11 @@
       "categoryName": "",
       "equipmentTypeId": 5,
       "equipmentName": "",
-      "sets": 10,
+      "sets": 9,
       "reps": 8,
       "weightLifted": 80,
       "notes": [
-        "Left elbow tight 2"
+        "Left elbow feeling strained after 9 sets. Took a break to prevent injury."
       ]
     },
     {

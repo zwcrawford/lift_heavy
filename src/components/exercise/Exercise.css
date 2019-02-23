@@ -2,12 +2,12 @@
   border: 1px solid black;
   justify-content: flex-start;
   border-radius: 8px;
-  padding: 10px;
   margin: 10px;
   width:70%;
+  min-width: 50%;
   margin-left:auto;
   margin-right:auto;
-  background-color: #E0E0E1;
+  background-color: #F2F2F2 ;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -53,6 +53,10 @@
 .card-link {
   font-weight: bold;
   color: #1985A1;
+}
+.card-links {
+  margin-left: 80%;
+
 }
 #addExerBtn {
   margin: 20px 20px;
@@ -107,7 +111,7 @@
   display: block;
   position: relative;
   top: -150px;
-  margin-top: -50px;
+  margin-top: -70px;
 }
 #notes {
   border: 1px solid black;
