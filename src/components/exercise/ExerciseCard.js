@@ -101,7 +101,7 @@ export default class ExerciseCard extends Component {
             {/* The <Link/> component from the React Router package installed has an attribute named "to". It will render a hyperlink in your DOM, and when clicked, it will change the URL in the browser to the value of the to attribute. */}
             <div className="card-links">
                 <Link className="card-link" to={`/exercises/${this.props.exercise.id}/edit`}>Edit</Link>
-                <Link className="card-link" to={`/home`} onClick={() => {this.props.deleteExercise(this.props.exercise.id)}}>Delete</Link>
+                <Link className="card-link" to={`/home`} onClick={() => this.props.deleteExercise(this.props.exercise.id)}>Delete</Link>
             </div>
           </div>
 
