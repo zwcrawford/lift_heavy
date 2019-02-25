@@ -29,7 +29,7 @@ export default class UserLogin extends Component {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
-    console.log(this.state)
+    //console.log(this.state)
   }
 
   /*

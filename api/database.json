@@ -18,40 +18,6 @@
   ],
   "exercises": [
     {
-      "id": 2,
-      "userId": 2,
-      "exerciseName": [
-        "Forearm Curls"
-      ],
-      "bodyCategoryId": 6,
-      "categoryName": "",
-      "equipmentTypeId": 5,
-      "equipmentName": "",
-      "sets": 8,
-      "reps": 8,
-      "weightLifted": 80,
-      "notes": [
-        " User2 Exer1"
-      ]
-    },
-    {
-      "id": 3,
-      "userId": 2,
-      "exerciseName": [
-        "Squat2"
-      ],
-      "bodyCategoryId": 9,
-      "categoryName": "",
-      "equipmentTypeId": 2,
-      "equipmentName": "",
-      "sets": 4,
-      "reps": 15,
-      "weightLifted": 180,
-      "notes": [
-        "User2 Exer2"
-      ]
-    },
-    {
       "id": 4,
       "userId": 3,
       "exerciseName": [
@@ -84,37 +50,11 @@
       "notes": "Stay @ 185 one more set after"
     },
     {
-      "id": 10,
-      "userId": 1,
-      "exerciseName": "Deadlift",
-      "bodyCategoryId": 9,
-      "categoryName": "",
-      "equipmentTypeId": 2,
-      "equipmentName": "",
-      "sets": 8,
-      "reps": 8,
-      "weightLifted": 280,
-      "notes": [
-        "This was fun"
-      ]
-    },
-    {
-      "userId": 1,
-      "exerciseName": "Test",
-      "bodyCategoryId": 3,
-      "categoryName": "",
-      "equipmentTypeId": 4,
-      "equipmentName": "",
-      "sets": 8,
-      "reps": 10,
-      "weightLifted": 80,
-      "notes": "sure",
-      "id": 11
-    },
-    {
       "id": 13,
       "userId": 1,
-      "exerciseName": "Preacher Curls",
+      "exerciseName": [
+        "Preacher Curls Yo!"
+      ],
       "bodyCategoryId": 3,
       "categoryName": "",
       "equipmentTypeId": 5,
@@ -138,6 +78,32 @@
       "reps": 8,
       "weightLifted": 160,
       "notes": "Extend reps next time"
+    },
+    {
+      "userId": 2,
+      "exerciseName": "8",
+      "bodyCategoryId": 2,
+      "categoryName": "",
+      "equipmentTypeId": 5,
+      "equipmentName": "",
+      "sets": 8,
+      "reps": 8,
+      "weightLifted": 8,
+      "notes": "8",
+      "id": 18
+    },
+    {
+      "userId": 2,
+      "exerciseName": "Test",
+      "bodyCategoryId": 0,
+      "categoryName": "",
+      "equipmentTypeId": 0,
+      "equipmentName": "",
+      "sets": 0,
+      "reps": 0,
+      "weightLifted": 0,
+      "notes": "- Add Profile features: img, page, stats \n- Overall lift stats: ttl weight lifted, etc.\n- Make Workouts Tab to add, edit, delete workouts. \n- Dates/ calendar log need to be a priority.\n- lb>kg conversion, body mass, fat, etc calculators.\n- Motivational image deck.",
+      "id": 19
     }
   ],
   "bodyCategories": [
